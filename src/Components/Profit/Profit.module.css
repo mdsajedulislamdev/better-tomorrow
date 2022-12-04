@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.profit {
+  background: #e2e2e2;
+  padding: 6.5vw;
+}
+.profitContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vw;
+  position: relative;
+}
+.title {
+  font-size: 3vw;
+  font-weight: bolder;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+.description {
+  font-size: 1.3vw;
+  padding-bottom: 1vw;
+}
+.allPara {
+  padding-bottom: 1vw;
+}
+.para {
+  font-size: 1.3vw;
+  font-weight: bolder;
+  color: black;
+}
+.button {
+  border: none;
+  outline: none;
+  padding: 0.5vw 2vw;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  color: #e29607;
+  border: 2px solid #e29607;
+  background: #e2e2e2;
+  border-radius: 20vw;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  background: #e29607;
+  color: white;
+}
+.nonProfitText {
+  color: #e29607;
+}
+.image {
+  width: 40vw;
+  height: 28vw;
+  border-radius: 5px;
+}
+/* ==============REsponsive max600px ======================== */
+@media only screen and (max-width: 600px) {
+  .profit {
+    background: #e2e2e2;
+    padding: 6.5vw 6.5vw 10vw 6.5vw;
+  }
+  .title {
+    font-size: 2.8vw;
+    font-weight: bolder;
+    text-align: left;
+  }
+  .description {
+    font-size: 1.5vw;
+    padding-bottom: 1vw;
+  }
+  .para {
+    font-size: 1.6vw;
+    font-weight: bolder;
+    color: black;
+  }
+  .button {
+    position: absolute;
+    left: 8rem;
+    top: 7.5rem;
+    padding: 1vw 6vw;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    z-index: 1;
+  }
+  .image {
+    width: 41vw;
+    height: 28vw;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.homeDiv {
+  margin-top: 7vw;
+  overflow-x: hidden;
+  background: #e2e2e2;
+}
+.image {
+  width: 100vw;
+  height: fit-content;
+}
+.contentDiv {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topTitle {
+  font-size: 3.5vw;
+  font-weight: bolder;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2vw;
+  color: white;
+}
+.bottomTitle {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: #e29607;
+  letter-spacing: 0.36vw;
+}
+.lastTitle {
+  font-size: 1.1vw;
+  letter-spacing: 0.1vw;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.button {
+  position: absolute;
+  top: 12vw;
+  left: 12vw;
+  outline: 0;
+  border: 0;
+  border: 1px solid #e29607;
+  background: transparent;
+  padding: 1vw 3vw;
+  color: white;
+  font-size: 1.7vw;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1vw;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  transform: translateX(-10px);
+  background: #e29607;
+}
+/* ===================Responsive max600px====================== */
+
+@media only screen and (max-width: 600px) {
+  .image {
+    width: 100vw;
+    height: 50vw;
+  }
+  .homeDiv {
+    margin-top: 0vw;
+    overflow-x: hidden;
+  }
+  .contentDiv {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .topTitle {
+    font-size: 4vw;
+    font-weight: bolder;
+    color: white;
+  }
+  .bottomTitle {
+    font-size: 1.8vw;
+    font-weight: bolder;
+    color: #ffb222;
+    letter-spacing: 0.33vw;
+  }
+  .lastTitle {
+    font-size: 1.6vw;
+    letter-spacing: 0.1vw;
+    padding-top: 1vw;
+    color: white;
+  }
+  .button {
+    position: absolute;
+    top: 15vw;
+    left: 14vw;
+    outline: 0;
+    border: 0;
+    border: 1px solid #ffb222;
+    background: transparent;
+    padding: 1.5vw 4vw;
+    color: white;
+    font-size: 2vw;
+    letter-spacing: 0.1vw;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+}

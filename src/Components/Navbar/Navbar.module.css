@@ -1,0 +1,169 @@
+.navContent {
+  width: 100vw;
+  height: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  position: fixed;
+  top: 0px;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.9);
+}
+.foundationText {
+  position: absolute;
+  font-size: 1vw;
+  right: 0.1vw;
+  top: 2.3vw;
+  color: #ffb222;
+}
+.navTitle {
+  position: absolute;
+  left: 5vw;
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.navTitle:hover {
+  color: #ffb222;
+}
+.customLink {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  border-radius: 4px;
+}
+.navText {
+  font-size: 1.7vw;
+}
+.navButton {
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding: 0.8vw;
+  font-size: 1.2vw;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 0.2vw;
+  border: 2px solid #ffb222;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.navButton:hover {
+  box-shadow: -1px 1px 3px 5px rgb(255, 255, 255);
+}
+.buttonDiv {
+  position: absolute;
+  right: 5vw;
+  display: flex;
+  justify-content: center;
+  gap: 0.5vw;
+}
+/* ================= Responsive Area MAX600px ======================== */
+@media only screen and (max-width: 600px) {
+  .navContent,
+  .navTitle,
+  .customLink,
+  .navButton {
+    display: none;
+  }
+  .mobileNav {
+    width: 100vw;
+    height: 85vw;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    z-index: 1;
+    border-radius: 0px 3px 3px 3px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  #customLinkOne {
+    display: block;
+    position: absolute;
+    top: 3.8rem;
+    left: 0rem;
+    padding: 0.3rem 10rem;
+  }
+  #customLinkTwo {
+    display: block;
+    position: absolute;
+    top: 6.2rem;
+    left: 0rem;
+    padding: 0.3rem 10rem;
+  }
+  #customLinkThree {
+    display: block;
+    position: absolute;
+    top: 8.5rem;
+    left: 0rem;
+    padding: 0.3rem 10rem;
+  }
+  #customLinkFour {
+    display: block;
+    position: absolute;
+    top: 11rem;
+    left: 0rem;
+    padding: 0.3rem 10rem;
+  }
+  .navText {
+    font-size: 1.3rem;
+  }
+  .navTitle {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: block;
+    font-size: 0.8rem;
+    border: 1.5px solid #ffb222;
+    padding: 5px 15px;
+    border-radius: 3px;
+  }
+  .foundationText {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 1rem;
+    top: 0rem;
+    color: #ffb222;
+  }
+  .timesIcon {
+    position: absolute;
+    top: 8px;
+    right: 2rem;
+    z-index: 1;
+    font-size: 2.8rem;
+    color: #ffb222;
+    font-weight: bold;
+  }
+  .burgerIcon {
+    position: absolute;
+    top: 9px;
+    right: 2rem;
+    z-index: 1;
+    font-size: 2.8rem;
+    padding: 2px;
+    border-radius: 3px;
+    color: #ffb222;
+    border: 2px solid #ffb222;
+    font-weight: bold;
+  }
+}
+/* ============= MAX768px ===================================== */
+@media only screen and (min-width: 601px) and (min-width: 768px) {
+  .burgerIcon {
+    display: none;
+  }
+  .timesIcon {
+    display: none;
+  }
+  .customLink {
+    font-size: 1.1rem;
+  }
+}

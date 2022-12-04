@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.NewsDiv {
+  margin-top: 2vw;
+  padding: 4vw;
+}
+.title {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+  font-family: "Roboto", sans-serif;
+}
+.articleText {
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2vw;
+}
+.icon {
+  font-size: 2vw;
+  color: #e29607;
+  display: inline-block;
+  padding-top: 0.7vw;
+}
+.readText {
+  color: #e29607;
+}
+.mainContentDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  margin-top: 2vw;
+}
+.content {
+  border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
+  box-shadow: -1px 1px 3px 0.5px #585858;
+  transition: transform 0.3s ease-in-out;
+}
+.content:hover {
+  transform: translateY(-10px);
+}
+.subContent {
+  padding: 1vw;
+}
+.image {
+  width: 29vw;
+  border-radius: 1.5vw 1.5vw 0vw 0vw;
+}
+.bottomTitle {
+  font-size: 1.6vw;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1vw;
+}
+.bottomTitleDescription {
+  font-size: 1.5vw;
+  padding-top: 1vw;
+  line-height: 2vw;
+}
+.readMoreButton {
+  width: 15vw;
+  font-size: 1.2vw;
+  outline: none;
+  border: 1px solid #e29607;
+  background: transparent;
+  padding: 0.8vw 2vw;
+  margin-top: 2vw;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+.readMoreButton:hover {
+  width: 20vw;
+  background: #e29607;
+}
+.bottomContentDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vw;
+  padding-bottom: 2vw;
+}
+.adminText {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.messageIcon {
+  padding-top: 0.1vw;
+}
+/* ================Responsive max600px ========================= */
+@media only screen and (max-width: 600px) {
+  .mainContentDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vw;
+    margin-top: 2vw;
+    padding: 2vw;
+  }
+  .title {
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    font-family: "Roboto", sans-serif;
+  }
+  .articleText {
+    text-align: center;
+    font-size: 2.8vw;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.2vw;
+  }
+  .icon {
+    font-size: 3vw;
+    color: #e29607;
+    display: inline-block;
+    padding-top: 0.7vw;
+  }
+  .image {
+    width: 88vw;
+    border-radius: 1.5vw 1.5vw 0vw 0vw;
+  }
+  .bottomTitle {
+    font-size: 3.8vw;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.1vw;
+  }
+  .subContent {
+    padding: 2.5vw;
+  }
+  .bottomTitleDescription {
+    font-size: 3vw;
+    padding-top: 3vw;
+    line-height: 4vw;
+  }
+  .readMoreButton {
+    width: 25vw;
+    font-size: 2.5vw;
+    outline: none;
+    border: 1px solid #e29607;
+    background: transparent;
+    padding: 1.5vw 3vw;
+    margin-top: 3vw;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    transition: 0.5s ease-in-out;
+  }
+  .readMoreButton:hover {
+    width: 30vw;
+    background: #e29607;
+  }
+  .bottomContentDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+    padding-bottom: 3vw;
+  }
+  .adminText {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+}

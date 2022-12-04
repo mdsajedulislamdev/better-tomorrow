@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.thinkDiv {
+  padding-top: 6vw;
+  padding: 4vw;
+}
+.title {
+  font-size: 3vw;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 0.2vw;
+  font-family: "Roboto", sans-serif;
+}
+.titleDescription {
+  font-size: 1.3vw;
+  padding-bottom: 1vw;
+  text-align: center;
+}
+.thinkText {
+  color: #e29607;
+}
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  margin-top: 5vw;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  padding: 1.5vw 1.5vw 1.5vw 2.2vw;
+  border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
+  box-shadow: 1px 1px 3px 2px #585858;
+  transition: transform 0.3s ease-in-out;
+}
+.content:hover {
+  transform: scale(1.1);
+}
+.name {
+  font-size: 1.8vw;
+  letter-spacing: 0.1vw;
+  padding-bottom: 0.5vw;
+  margin-top: 5vw;
+  font-family: "Roboto", sans-serif;
+}
+.nameTitle {
+  font-size: 1vw;
+  font-weight: bolder;
+  padding-bottom: 1vw;
+}
+.speech {
+  font-size: 1.3vw;
+  word-break: break-all;
+}
+.image {
+  width: 7vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -3.5vw;
+  border: 1px solid #e29607;
+}
+/* ================Responsive max600px ========================= */
+@media only screen and (max-width: 600px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7vw;
+    margin-top: 5vw;
+  }
+  .titleDescription {
+    font-size: 2.5vw;
+    padding-bottom: 1vw;
+    text-align: center;
+    padding: 3vw;
+  }
+  .name {
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    padding-bottom: 0.5vw;
+    margin-top: 10vw;
+    font-family: "Roboto", sans-serif;
+  }
+  .nameTitle {
+    font-size: 2vw;
+    font-weight: bolder;
+    padding-bottom: 2vw;
+  }
+  .content {
+    padding: 1.5vw 1.8vw 2.5vw 2.5vw;
+    border-radius: 0.2vw 0.2vw 1.5vw 1.5vw;
+    box-shadow: 1px 1px 7px 1px #585858;
+  }
+  .title {
+    font-size: 5vw;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 0rem;
+  }
+  .speech {
+    font-size: 2.5vw;
+    word-break: break-all;
+  }
+  .image {
+    width: 12vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -3.5vw;
+    border: 1px solid #e29607;
+  }
+  .heading {
+    font-size: 4vw;
+  }
+  .icon {
+    font-size: 15vw;
+  }
+}

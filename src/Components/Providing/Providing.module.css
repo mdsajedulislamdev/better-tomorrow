@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.providing {
+  background: #e2e2e2;
+  padding: 4vw;
+}
+.providingText {
+  color: #e29607;
+}
+.mainContentDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+}
+.content {
+  padding: 1.5vw 1.5vw 1.5vw 2.2vw;
+  border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
+  box-shadow: 1px 1px 3px 2px #585858;
+  transition: transform 0.3s ease-in-out;
+}
+.content:hover {
+  transform: translateY(10px);
+}
+.title {
+  font-size: 3vw;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 1vw;
+  letter-spacing: 0.2vw;
+  font-family: "Roboto", sans-serif;
+}
+.heading {
+  font-size: 1.5vw;
+  letter-spacing: 0.01vw;
+  font-family: "Roboto", sans-serif;
+}
+.image {
+  width: 25vw;
+  border-radius: 3px;
+}
+.paragraph {
+  font-size: 1.2vw;
+}
+.button {
+  outline: none;
+  border: none;
+  font-size: 1.2vw;
+  padding: 0.4vw 1vw;
+  color: #e29607;
+  margin-top: 1vw;
+  background: transparent;
+  border: 2px solid #e29607;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+.button:hover {
+  background: #e29607;
+  color: white;
+}
+/* ================Responsive max600px ========================= */
+@media only screen and (max-width: 600px) {
+  .providing {
+    background: #e2e2e2;
+    padding: 6vw;
+  }
+  .mainContentDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vw;
+  }
+  .content {
+    padding: 1.5vw 1.5vw 1.5vw 2.2vw;
+    border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
+    box-shadow: 1px 1px 7px 1px #585858;
+  }
+  .title {
+    font-size: 5vw;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 0.5rem;
+  }
+  .heading {
+    font-size: 4vw;
+  }
+  .image {
+    width: 84vw;
+    border-radius: 3px;
+  }
+  .paragraph {
+    font-size: 2.5vw;
+  }
+  .button {
+    font-size: 3.5vw;
+    padding: 0.8vw 2vw;
+    color: #e29607;
+    background: transparent;
+    border: 2px solid #e29607;
+    border-radius: 2px;
+    margin-top: 2vw;
+    cursor: pointer;
+  }
+}
