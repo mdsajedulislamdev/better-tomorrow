@@ -1,105 +1,338 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
-
+/* =============================== */
 .providing {
-  background: #e2e2e2;
-  padding: 4vw;
-}
-.providingText {
-  color: #e29607;
-}
-.mainContentDiv {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1vw;
-}
-.content {
-  padding: 1.5vw 1.5vw 1.5vw 2.2vw;
-  border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
-  box-shadow: 1px 1px 3px 2px #585858;
-  transition: transform 0.3s ease-in-out;
-}
-.content:hover {
-  transform: translateY(10px);
+  margin-left: 7vw;
+  margin-right: 7vw;
+  margin-top: 4vw;
 }
 .title {
   font-size: 3vw;
   font-weight: bolder;
   text-align: center;
-  padding-bottom: 1vw;
+  color: #2d3630;
   letter-spacing: 0.2vw;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.providingText {
+  color: #3d9c4d;
+}
+.WorldwideText {
+  text-align: center;
+  font-size: 1.3vw;
+  color: #2d3630;
+  letter-spacing: 0.1vw;
+}
+.CustomBorderDiv {
+  width: 84vw;
+  height: 0.1vh;
+  margin: 0 auto;
+  background-color: #585858;
+}
+.CustomBorderRightBottom {
+  width: 5vw;
+  height: 0.3vh;
+  margin-left: auto;
+  margin-top: 0.5vw;
+  background-color: #3d9c4d;
+}
+.mainContentDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  margin-top: 2vw;
+}
+.content {
+  padding: 1.2vw;
+  border-top: 5px solid #3d9c4d;
+  border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
+  box-shadow: -1px 1px 2px 0px #3d9c4d;
 }
 .heading {
-  font-size: 1.5vw;
-  letter-spacing: 0.01vw;
-  font-family: "Roboto", sans-serif;
+  font-size: 1.4vw;
+  margin-top: 1.5vw;
+  border-bottom: 1px solid #2d3630;
+  padding-bottom: 0.5vw;
+  color: #2d3630;
+}
+.ImageDiv {
+  width: 25vw;
+  height: 50vh;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.content:hover .image {
+  transform: scale(1.1);
 }
 .image {
   width: 25vw;
+  height: 51vh;
   border-radius: 3px;
-}
-.paragraph {
-  font-size: 1.2vw;
-}
-.button {
-  outline: none;
-  border: none;
-  font-size: 1.2vw;
-  padding: 0.4vw 1vw;
-  color: #e29607;
-  margin-top: 1vw;
-  background: transparent;
-  border: 2px solid #e29607;
-  border-radius: 2px;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
-  font-family: "Roboto", sans-serif;
+  transition: transform 0.5s ease-in-out;
 }
-.button:hover {
-  background: #e29607;
+/* ===============Overly Style==================== */
+.OverlyStyle {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 100%;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  background: #3d9c4dd8;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.content:hover .OverlyStyle {
+  bottom: 0%;
+  height: 100%;
+}
+.Donate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  padding: 0.6vw;
+  text-align: center;
+  font-size: 2vw;
   color: white;
 }
-/* ================Responsive max600px ========================= */
+.paragraph {
+  margin-top: 1.5vw;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
+  color: #2d3630;
+  font-family: sans-serif, lato;
+}
+.ReadMoreDiv {
+  display: inline-block;
+  margin-top: 1vw;
+}
+.ReadMoreText {
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: #2d3630;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.ReadMoreText:hover {
+  color: #3d9c4d;
+}
+.ReadMoreIcon {
+  position: absolute;
+  font-size: 1.5vw;
+  top: 4%;
+}
+
+/* ================Responsive (min-width: 600px)================ */
 @media only screen and (max-width: 600px) {
   .providing {
-    background: #e2e2e2;
-    padding: 6vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 9vw;
+    padding-bottom: 5vw;
   }
   .mainContentDiv {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 4vw;
   }
-  .content {
-    padding: 1.5vw 1.5vw 1.5vw 2.2vw;
-    border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
-    box-shadow: 1px 1px 7px 1px #585858;
+  .WorldwideText {
+    text-align: center;
+    font-size: 2.5vw;
+    padding-bottom: 1vw;
+    color: #2d3630;
+    letter-spacing: 0.1vw;
   }
   .title {
     font-size: 5vw;
     font-weight: bolder;
     text-align: center;
-    padding-top: 1vw;
-    padding-bottom: 0.5rem;
+    color: #2d3630;
+    letter-spacing: 0.2vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .ImageDiv {
+    width: 100%;
+    height: 43vh;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .content:hover .image {
+    transform: scale(1.1);
+  }
+  .image {
+    width: 100%;
+    height: 44vh;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  .content {
+    padding: 1.3vw;
+    border-top: 10px solid #3d9c4d;
+    border-radius: 1vw 1vw 0.5vw 0.5vw;
+    box-shadow: -2px 2px 3px 0px #3d9c4d;
   }
   .heading {
     font-size: 4vw;
+    margin-top: 1.5vw;
+    border-bottom: 1px solid #2d3630;
+    padding-bottom: 1vw;
+    color: #2d3630;
   }
-  .image {
-    width: 84vw;
+  /* ===============Overly Style==================== */
+  .OverlyStyle {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 100%;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    background: #3d9c4dd8;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .content:hover .OverlyStyle {
+    bottom: 0%;
+    height: 100%;
+  }
+  .Donate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 1px solid #e2e2e2;
     border-radius: 3px;
+    padding: 1vw;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
   }
   .paragraph {
-    font-size: 2.5vw;
+    margin-top: 1.5vw;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: #2d3630;
+    font-family: sans-serif, lato;
   }
-  .button {
+  .ReadMoreDiv {
+    display: inline-block;
+    margin-top: 1vw;
+  }
+  .ReadMoreText {
+    text-decoration: none;
     font-size: 3.5vw;
-    padding: 0.8vw 2vw;
-    color: #e29607;
-    background: transparent;
-    border: 2px solid #e29607;
-    border-radius: 2px;
-    margin-top: 2vw;
+    color: #2d3630;
     cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  .ReadMoreText:hover {
+    color: #3d9c4d;
+  }
+  .ReadMoreIcon {
+    position: absolute;
+    font-size: 4vw;
+    top: 9%;
+  }
+  .CustomBorderRightBottom {
+    display: none;
+  }
+}
+/* ================Responsive (min-width: 601px) and (max-width: 768px)================ */
+@media screen and (max-width: 768px) and (min-width: 601px) {
+  .providing {
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 7vw;
+  }
+  .mainContentDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4vw;
+  }
+  .ImageDiv {
+    width: 25vw;
+    height: 36vh;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .content:hover .image {
+    transform: scale(1.1);
+  }
+  .image {
+    width: 25vw;
+    height: 37vh;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  .WorldwideText {
+    text-align: center;
+    font-size: 1.3vw;
+    color: #2d3630;
+    padding: 1vw 0vw;
+    letter-spacing: 0.1vw;
+  }
+  .CustomBorderRightBottom {
+    width: 5vw;
+    height: 0.5vh;
+    display: inline-block;
+    background-color: #3d9c4d;
+  }
+}
+/* ==============(max-width: 1024px) and (min-width: 769px)========================== */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .ImageDiv {
+    width: 25vw;
+    height: 41vh;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .content:hover .image {
+    transform: scale(1.1);
+  }
+  .image {
+    width: 25vw;
+    height: 42vh;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+/* ================(max-width: 1900px) and (min-width: 1025px)============= */
+@media screen and (max-width: 1900px) and (min-width: 1025px) {
+  .ImageDiv {
+    width: 25vw;
+    height: 41vh;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .content:hover .image {
+    transform: scale(1.1);
+  }
+  .image {
+    width: 25vw;
+    height: 42vh;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: transform 0.5s ease-in-out;
   }
 }

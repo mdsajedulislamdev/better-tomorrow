@@ -1,72 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.position {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 .navContent {
   width: 100vw;
-  height: 7vw;
+  height: 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1vw;
-  position: fixed;
-  top: 0px;
-  overflow: hidden;
+  box-shadow: 0px 1px 5px 0px #2d3630;
+  background: #ffffff;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.9);
-}
-.foundationText {
-  position: absolute;
-  font-size: 1vw;
-  right: 0.1vw;
-  top: 2.3vw;
-  color: #ffb222;
+  position: relative;
 }
 .navTitle {
   position: absolute;
   left: 5vw;
   text-decoration: none;
   font-size: 2.5vw;
-  color: white;
-  font-weight: bold;
+  color: #2d3630;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  font-family: "Luckiest Guy", cursive;
+  transition: 0.2s ease-in-out;
 }
 .navTitle:hover {
-  color: #ffb222;
+  color: #3d9c4d;
 }
 .customLink {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  color: #2d3630;
+  font-family: sans-serif, lato;
   padding: 0.5vw 1vw;
-  border-radius: 4px;
+  border-radius: 30px;
+  cursor: pointer;
 }
 .navText {
-  font-size: 1.7vw;
-}
-.navButton {
-  display: inline-block;
-  border: none;
-  outline: none;
-  padding: 0.8vw;
   font-size: 1.2vw;
-  color: #ffffff;
   font-weight: bold;
-  border-radius: 0.2vw;
-  border: 2px solid #ffb222;
-  background: transparent;
+  font-family: "Ubuntu", sans-serif;
+}
+.callAnytimeContent {
+  width: fit-content;
+  height: auto;
+  position: absolute;
+  right: 7vw;
+  padding: 0 0 0 5vw;
+  border-left: 1px solid #2d3630;
+}
+.callAnytime {
+  font-size: 1.6vw;
+  color: #2d3630;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+.callAnytime:hover {
+  color: #3d9c4d;
   cursor: pointer;
+}
+.number {
+  font-size: 1.2vw;
+  color: #2d3630;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+.number:hover {
+  color: #3d9c4d;
+  cursor: pointer;
+}
+.divIcon {
+  width: 0;
+  height: 0;
+  border-top: 8px solid #000000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  left: 0px;
+}
+/* ============Dropdown====================== */
+.dropdown {
+  width: 17vw;
+  height: fit-content;
+  margin: 0;
+  position: absolute;
+  top: 4vw;
+  left: 44.5vw;
+  border-top: 2px solid #2d3630;
+  border-radius: 3px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0px 1px 4px 0px #2d3630;
+}
+.customLink:hover .dropdown {
+  display: block;
+}
+.dropdown li {
+  list-style: none;
+}
+.dropdown li:hover {
+  background-color: #2d3630;
+  transition: 0.2s ease-in;
+}
+.dropdown li:hover .dropLink {
+  color: #ffffff;
+  transform: translate(15px);
   transition: 0.3s ease-in-out;
 }
-.navButton:hover {
-  box-shadow: -1px 1px 3px 5px rgb(255, 255, 255);
+.dropLink {
+  text-decoration: none;
+  color: #2d3630;
+  font-size: 1.2vw;
+  font-family: sans-serif, lato;
+  display: block;
+  padding: 0.7vw;
+  cursor: pointer;
 }
-.buttonDiv {
-  position: absolute;
-  right: 5vw;
-  display: flex;
-  justify-content: center;
-  gap: 0.5vw;
-}
+
 /* ================= Responsive Area MAX600px ======================== */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .navContent,
   .navTitle,
   .customLink,
@@ -75,63 +132,41 @@
   }
   .mobileNav {
     width: 100vw;
-    height: 85vw;
+    height: 100vw;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     padding: 1rem;
     z-index: 1;
-    border-radius: 0px 3px 3px 3px;
-    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0px 0px 3px 3px;
+    background-color: #2d3630f3;
   }
-  #customLinkOne {
+  .customLink {
+    position: relative;
+    top: 15vw;
     display: block;
-    position: absolute;
-    top: 3.8rem;
-    left: 0rem;
-    padding: 0.3rem 10rem;
-  }
-  #customLinkTwo {
-    display: block;
-    position: absolute;
-    top: 6.2rem;
-    left: 0rem;
-    padding: 0.3rem 10rem;
-  }
-  #customLinkThree {
-    display: block;
-    position: absolute;
-    top: 8.5rem;
-    left: 0rem;
-    padding: 0.3rem 10rem;
-  }
-  #customLinkFour {
-    display: block;
-    position: absolute;
-    top: 11rem;
-    left: 0rem;
-    padding: 0.3rem 10rem;
+    text-align: center;
+    font-size: 3vw;
   }
   .navText {
-    font-size: 1.3rem;
+    display: block;
+    font-size: 1rem;
+    padding: 0.2vw;
+    border-radius: 10px;
+    background-color: #3d9c4d;
   }
   .navTitle {
     position: absolute;
     left: 1rem;
     top: 1rem;
     display: block;
-    font-size: 0.8rem;
-    border: 1.5px solid #ffb222;
+    font-size: 1rem;
+    color: #ffffff;
+    border: 1.5px solid #3d9c4d;
+    font-family: sans-serif;
     padding: 5px 15px;
     border-radius: 3px;
-  }
-  .foundationText {
-    position: absolute;
-    font-size: 0.5rem;
-    right: 1rem;
-    top: 0rem;
-    color: #ffb222;
   }
   .timesIcon {
     position: absolute;
@@ -139,7 +174,7 @@
     right: 2rem;
     z-index: 1;
     font-size: 2.8rem;
-    color: #ffb222;
+    color: #ffffff;
     font-weight: bold;
   }
   .burgerIcon {
@@ -150,13 +185,47 @@
     font-size: 2.8rem;
     padding: 2px;
     border-radius: 3px;
-    color: #ffb222;
-    border: 2px solid #ffb222;
+    color: #ff4929;
+    border: 2px solid #3d9c4d;
     font-weight: bold;
   }
+  .divIcon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid #ffffff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 0px;
+  }
+  .callAnytimeContent {
+    display: none;
+  }
+  /* ============Dropdown=================================== */
+  .dropdown {
+    display: none;
+  }
+  .MyDropdown {
+    display: block;
+  }
+  .dropdown li {
+    list-style: none;
+  }
+  .dropLink {
+    display: block;
+    text-decoration: none;
+    color: #bdfd27;
+    font-size: 4vw;
+    font-family: sans-serif, lato;
+    /* background-color: #ff4929; */
+    padding: 1.5vw;
+    cursor: pointer;
+  }
 }
-/* ============= MAX768px ===================================== */
-@media only screen and (min-width: 601px) and (min-width: 768px) {
+/* =============(max-width: 768px) and (min-width: 601px)====================== */
+@media screen and (max-width: 768px) and (min-width: 601px) {
   .burgerIcon {
     display: none;
   }
@@ -165,5 +234,84 @@
   }
   .customLink {
     font-size: 1.1rem;
+  }
+  .customLink {
+    text-decoration: none;
+    color: #2d3630;
+    font-family: sans-serif, lato;
+    padding: 0vw 1vw;
+    border-radius: 30px;
+  }
+  /* ============Dropdown responsive====================== */
+  .dropdown {
+    position: absolute;
+    top: 5.8vw;
+    left: 44.5vw;
+  }
+  .customLink:hover .dropdown {
+    display: block;
+  }
+  .dropdown li {
+    list-style: none;
+  }
+  .dropdown li:hover {
+    background-color: #2d3630;
+    transition: 0.2s ease-in;
+  }
+  .dropdown li:hover .dropLink {
+    color: #ffffff;
+    transform: translate(15px);
+    transition: 0.3s ease-in-out;
+  }
+  .dropLink {
+    text-decoration: none;
+    color: #2d3630;
+    font-size: 1.2vw;
+    font-family: sans-serif, lato;
+    display: block;
+    padding: 0.7vw;
+    cursor: pointer;
+  }
+  /* ================Icon=========================== */
+  .divIcon {
+    width: 0;
+    height: 0;
+    border-top: 6px solid #000000;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .MyDropdown {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .burgerIcon {
+    display: none;
+  }
+  .timesIcon {
+    display: none;
+  }
+  .dropdown {
+    position: absolute;
+    top: 5.7vw;
+    left: 44.5vw;
+  }
+  .MyDropdown {
+    display: none;
+  }
+}
+@media screen and (max-width: 1900px) and (min-width: 1025px) {
+  .burgerIcon {
+    display: none;
+  }
+  .timesIcon {
+    display: none;
+  }
+  .MyDropdown {
+    display: none;
   }
 }

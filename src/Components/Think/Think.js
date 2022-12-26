@@ -1,48 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import style from "./Think.module.css";
-import girlOne from "../../../src/images/girl1.png";
-import girlTwo from "../../../src/images/girl2.png";
-import Man from "../../../src/images/man.png";
+import data from "./ThinkData";
 
 const Think = () => {
+  const [allData] = useState(data);
+  const length = allData.length;
+  const [indexNumber, setIndexNumber] = useState(0);
+
+  const Next = () => {
+    setIndexNumber(indexNumber === length - 1 ? 0 : indexNumber + 1);
+  };
+  const Prev = () => {
+    setIndexNumber(indexNumber === 0 ? length - 1 : indexNumber - 1);
+  };
+
+  // useEffect(() => {
+  // setInterval(() => {
+  //   setIndexNumber((indexNumber) => (indexNumber == length - 1 ? 0 : indexNumber + 1));
+  // }, 3000);
+  // }, []);
+
   return (
     <div className={style.thinkDiv}>
       <div>
         <h1 className={style.title}>
           WHAT PEOPLE <span className={style.thinkText}>THINK</span>
         </h1>
-        <p className={style.titleDescription}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore, deleniti,
-          <br /> numquam, incidunt ullam voluptate at accusantium.
-        </p>
+        <div className={style.CustomBorderDiv}></div>
       </div>
       <div className={style.mainContent}>
-        <div className={style.content}>
-          <h1 className={style.name}>TEENA JASON</h1>
-          <h3 className={style.nameTitle}>DEVELOPER</h3>
-          <p className={style.speech}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eum illum facilis, repudiandae minima harum tempore inventore mollitia eligendi excepturi libero, cumque illo molestias nisi.
-            Itaque dolor officia expedita, error hic pariatur saepe eum dolore atque autem quis architecto voluptatem est nihil ipsam eligendi sed optio laboriosam odit mollitia doloribus.
-          </p>
-          <img className={style.image} src={girlOne} alt="avatar" />
-        </div>
-        <div className={style.content}>
-          <h1 className={style.name}>MELINA MILLER</h1>
-          <h3 className={style.nameTitle}>DESIGNER</h3>
-          <p className={style.speech}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eum illum facilis, repudiandae minima harum tempore inventore mollitia eligendi excepturi libero, cumque illo molestias nisi.
-            Itaque dolor officia expedita, error hic pariatur saepe eum dolore atque autem quis architecto voluptatem est nihil ipsam eligendi sed optio laboriosam odit mollitia doloribus.
-          </p>
-          <img className={style.image} src={Man} alt="avatar" />
-        </div>
-        <div className={style.content}>
-          <h1 className={style.name}>MILAR MARINA</h1>
-          <h3 className={style.nameTitle}>DEVELOPER</h3>
-          <p className={style.speech}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eum illum facilis, repudiandae minima harum tempore inventore mollitia eligendi excepturi libero, cumque illo molestias nisi.
-            Itaque dolor officia expedita, error hic pariatur saepe eum dolore atque autem quis architecto voluptatem est nihil ipsam eligendi sed optio laboriosam odit mollitia doloribus.
-          </p>
-          <img className={style.image} src={girlTwo} alt="avatar" />
+        {allData.slice(indexNumber, indexNumber + 1).map((obj) => (
+          <div className={style.Contents} key={obj.id}>
+            <div className={style.ImgNameTitleDiv}>
+              <img className={style.image} src={obj?.image} alt="avatar" />
+              <p className={style.ImageTitle}>{obj?.name}</p>
+              <p className={style.ImageName}>{obj?.title}</p>
+            </div>
+            <div className={style.DescriptionDiv}>
+              <p className={style.Description}>{obj?.description}</p>
+              <img className={style.QuoteIcon} src={obj?.quoteRight} alt="icon" />
+            </div>
+          </div>
+        ))}
+        <div className={style.NextPrevButtonDiv}>
+          <button className={style.PrevButton} onClick={Prev}>
+            {<HiChevronLeft className={style.LeftIcon} />}
+          </button>
+          <button className={style.NextButton} onClick={Next}>
+            {<HiChevronRight className={style.RightIcon} />}
+          </button>
         </div>
       </div>
     </div>

@@ -1,63 +1,221 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/* ======================================================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
-.homeDiv {
-  margin-top: 7vw;
-  overflow-x: hidden;
-  background: #e2e2e2;
+.imageDiv {
+  width: 100vw;
+  height: 45vw;
+  overflow: hidden;
 }
+.AllCarouselContents {
+  display: flex;
+  animation: leftRight 8s ease-out 12s infinite;
+}
+/* ===================secondCarousel  Animation========================= */
+@keyframes leftRight {
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: -102%;
+  }
+  100% {
+    margin-left: -102%;
+  }
+}
+
+.ContentDivOne {
+  position: relative;
+}
+.firstCarouselContents {
+  position: absolute;
+  top: 8%;
+  left: 51%;
+}
+/* ============Banner Image Animation==================== */
 .image {
   width: 100vw;
-  height: fit-content;
+  height: 45vw;
 }
-.contentDiv {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+/* =============Top Title Animation=========================== */
+.firstCarouselTopTitle {
+  font-size: 10vw;
+  text-align: center;
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 0.3vw;
+  color: #ffffff;
+  animation: animate 3s 1;
 }
-.topTitle {
+@keyframes animate {
+  0% {
+    transform: translateY(250%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* ------^^^------------------------------------ */
+
+.firstCarouselBottomTitle {
   font-size: 3.5vw;
-  font-weight: bolder;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.2vw;
-  color: white;
+  font-family: "Paytone One", sans-serif;
+  color: #b3ff66;
+  text-align: center;
+  letter-spacing: 0.5vw;
+  animation: BottomTitle 3s 1;
 }
-.bottomTitle {
-  font-size: 1.5vw;
-  font-weight: bolder;
-  color: #e29607;
-  letter-spacing: 0.36vw;
+
+/* ==============bottomTitle animation====================== */
+@keyframes BottomTitle {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
-.lastTitle {
-  font-size: 1.1vw;
+/* -------^^^---------------------------------------------- */
+
+.firstCarouselLastTitle {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1vw;
+  text-align: center;
+  border-radius: 5vw;
+  background-color: #b3ff66;
+  font-family: sans-serif, "lato";
+  color: #2d3630;
+  animation: LastTitle 3s 1;
+}
+/* =============Last Title animation========================= */
+@keyframes LastTitle {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.firstCarouselLastTitle a {
+  text-decoration: none;
+  font-size: 1.4vw;
   letter-spacing: 0.1vw;
-  font-family: "Roboto", sans-serif;
-  color: white;
+  color: #2d3630;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.3s ease-in-out 1;
 }
-.button {
+.firstCarouselLastTitle a:hover {
+  text-decoration: underline;
+}
+.FirstButton a {
+  text-decoration: none;
+  font-size: 1.1vw;
+  color: #ffffff;
+}
+.FirstButton {
+  width: 15vw;
+  height: auto;
   position: absolute;
-  top: 12vw;
-  left: 12vw;
+  top: 29vw;
+  left: 15vw;
   outline: 0;
   border: 0;
-  border: 1px solid #e29607;
+  border: 2px solid #b3ff66;
   background: transparent;
-  padding: 1vw 3vw;
-  color: white;
-  font-size: 1.7vw;
-  font-family: "Roboto", sans-serif;
+  padding: 1vw 1vw;
+  font-family: "Paytone One", sans-serif;
   letter-spacing: 0.1vw;
-  border-radius: 3px;
+  border-radius: 5vw;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
+  animation: BottomButton 3s 1;
 }
-.button:hover {
-  transform: translateX(-10px);
-  background: #e29607;
+
+@keyframes BottomButton {
+  0% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.FirstButton:hover {
+  width: 14vw;
+  background-color: #3d9c4d;
+}
+
+/* ===================Second Carousel Content Div Two========================= */
+.ContentDivTwo {
+  position: relative;
+}
+.secondCarouselContents {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+}
+.secondCarouselTopTitle {
+  font-size: 7vw;
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 0.3vw;
+  color: #ffffff;
+}
+.secondCarouselBottomTitle {
+  font-size: 3vw;
+  font-family: "Paytone One", sans-serif;
+  color: #3d9c4d;
+  text-align: center;
+  letter-spacing: 0.5vw;
+}
+.secondCarouselLastTitle {
+  width: fit-content;
+  padding: 1vw;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5vw;
+  background-color: #b3ff66;
+  font-family: sans-serif, "lato";
+  color: #2d3630;
+}
+.secondCarouselLastTitle a {
+  text-decoration: none;
+  font-size: 1.4vw;
+  letter-spacing: 0.1vw;
+  color: #2d3630;
+  transition: 0.1s ease-in-out;
+}
+.secondCarouselLastTitle:hover a {
+  text-decoration: underline;
+}
+.SecondButton {
+  width: 15vw;
+  height: auto;
+  position: relative;
+  top: 1vw;
+  left: 28vw;
+  outline: 0;
+  border: 0;
+  border: 2px solid #b3ff66;
+  background: transparent;
+  padding: 1vw 1vw;
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 0.1vw;
+  border-radius: 5vw;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.SecondButton a {
+  text-decoration: none;
+  font-size: 1.1vw;
+  color: #2d3630;
+}
+.SecondButton:hover {
+  width: 14vw;
+  color: #ffffff;
+  background-color: #3d9c4d;
 }
 /* ===================Responsive max600px====================== */
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .image {
     width: 100vw;
     height: 50vw;
@@ -66,10 +224,10 @@
     margin-top: 0vw;
     overflow-x: hidden;
   }
-  .contentDiv {
+  .firstCarouselContents {
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 40%;
+    left: 65%;
     transform: translate(-50%, -50%);
   }
   .topTitle {
@@ -77,32 +235,65 @@
     font-weight: bolder;
     color: white;
   }
-  .bottomTitle {
-    font-size: 1.8vw;
-    font-weight: bolder;
-    color: #ffb222;
-    letter-spacing: 0.33vw;
-  }
-  .lastTitle {
-    font-size: 1.6vw;
+  .firstCarouselLastTitle {
     letter-spacing: 0.1vw;
+    font-size: 1.8vw;
     padding-top: 1vw;
     color: white;
   }
-  .button {
+  .FirstButton {
     position: absolute;
-    top: 15vw;
-    left: 14vw;
+    width: 22vw;
+    top: 30vw;
+    left: 12vw;
     outline: 0;
-    border: 0;
-    border: 1px solid #ffb222;
-    background: transparent;
-    padding: 1.5vw 4vw;
-    color: white;
-    font-size: 2vw;
+    border: 1px solid #b3ff66;
     letter-spacing: 0.1vw;
-    border-radius: 3px;
+    color: white;
+    background: transparent;
+    border-radius: 10vw;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+  }
+  .FirstButton a {
+    text-decoration: none;
+    font-size: 2vw;
+    color: #ffffff;
+  }
+
+  /* ===================================== */
+  .secondCarouselLastTitle {
+    width: fit-content;
+    padding: 1vw;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5vw;
+    background-color: #b3ff66;
+    font-family: sans-serif, "lato";
+    color: #2d3630;
+  }
+  .secondCarouselLastTitle a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    letter-spacing: 0.1vw;
+    color: #2d3630;
+    transition: 0.1s ease-in-out;
+  }
+  .SecondButton {
+    position: absolute;
+    width: 22vw;
+    top: 22vw;
+    left: 23vw;
+    outline: 0;
+    border: 1px solid #b3ff66;
+    letter-spacing: 0.1vw;
+    color: white;
+    background: transparent;
+    border-radius: 10vw;
+    cursor: pointer;
+  }
+  .SecondButton a {
+    text-decoration: none;
+    font-size: 2vw;
+    color: #ffffff;
   }
 }

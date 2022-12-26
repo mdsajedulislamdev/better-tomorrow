@@ -1,57 +1,55 @@
 import React from "react";
 import style from "./Help.module.css";
-import { FaPrayingHands, FaHandHoldingUsd, FaDollarSign, FaHandshake } from "react-icons/fa";
+import { FaPrayingHands, FaHandHoldingUsd, FaDollarSign, FaHandshake, FaLongArrowAltRight } from "react-icons/fa";
 
 const Help = () => {
   return (
-    <div className={style.help}>
+    <div className={style.HelpContainerDiv}>
       <div>
         <div>
           <h1 className={style.title}>
             <span className={style.howText}>HOW</span> COULD <span className={style.youText}>YOU</span> HELP ?
           </h1>
-          <p className={style.paragraph}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis quos neque vitae! <br /> Voluptatum at sed magni sequi laborum harum.
-          </p>
+          <div className={style.CustomBorderDiv}></div>
         </div>
         <div className={style.mainContentDiv}>
           <div className={style.content}>
-            <i className={style.icon}>
-              <FaPrayingHands />
-            </i>
+            <FaPrayingHands className={style.icon} />
             <h3 className={style.volunteerTitle}>BECOME VOLUNTEER</h3>
             <p className={style.volunteerDescription}>
-              Quas, reprehenderit.consectetur adipisicing elit. reprehenderit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum harum.
+              Reprehenderit.consectetur adipisicing elit. reprehenderit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum.
             </p>
-            <h4 className={style.readMoreText}>READ MORE</h4>
+            <a href="#" className={style.readMoreText}>
+              READ MORE <i>{<FaLongArrowAltRight className={style.ReadMoreIcon} />}</i>
+            </a>
           </div>
           <div className={style.content}>
-            <i className={style.icon}>
-              <FaHandHoldingUsd />
-            </i>
+            <FaHandHoldingUsd className={style.icon} />
             <h3 className={style.volunteerTitle}>GIVE INSPIRATION</h3>
-            <p className={style.volunteerDescription}>Reprehenderit.consectetur adipisicing elit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum harum.</p>
-            <h4 className={style.readMoreText}>READ MORE</h4>
+            <p className={style.volunteerDescription}>Reprehenderit.consectetur adipisicing elit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi.</p>
+            <a href="#" className={style.readMoreText}>
+              READ MORE <i>{<FaLongArrowAltRight className={style.ReadMoreIcon} />}</i>
+            </a>
           </div>
           <div className={style.content}>
-            <i className={style.icon}>
-              <FaDollarSign />
-            </i>
+            <FaDollarSign className={style.icon} />
             <h3 className={style.volunteerTitle}>SEND DONATION</h3>
             <p className={style.volunteerDescription}>
               Consectetur adipisicing elit. reprehenderit.consectetur adipisicing elit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum harum.
             </p>
-            <h4 className={style.readMoreText}>READ MORE</h4>
+            <a href="#" className={style.readMoreText}>
+              READ MORE <i>{<FaLongArrowAltRight className={style.ReadMoreIcon} />}</i>
+            </a>
           </div>
           <div className={style.content}>
-            <i className={style.icon}>
-              <FaHandshake />
-            </i>
+            <FaHandshake className={style.icon} />
             <h3 className={style.volunteerTitle}>CALL FOR DONATION</h3>
             <p className={style.volunteerDescription}>
-              Adipisicing elit. reprehenderit.consectetur adipisicing elit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum harum.
+              Adipisicing elit. reprehenderit.consectetur adipisicing elit.adipisicing elit. Minus nobis quos neque vitae! Voluptatum at sed magni sequi laborum.
             </p>
-            <h4 className={style.readMoreText}>READ MORE</h4>
+            <a href="#" className={style.readMoreText}>
+              READ MORE <i>{<FaLongArrowAltRight className={style.ReadMoreIcon} />}</i>
+            </a>
           </div>
         </div>
       </div>
@@ -60,8 +58,3 @@ const Help = () => {
 };
 
 export default Help;
-
-// FaPrayingHands
-// FaHandHoldingUsd
-// FaDollarSign
-// FaHandshake

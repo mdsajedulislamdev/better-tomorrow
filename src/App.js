@@ -5,16 +5,18 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Service from "./Components/Service/Service";
+import TopNav from "./Components/TopNav/TopNav";
 
 function App() {
   return (
     <div>
+      <TopNav></TopNav>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="service" element={<Service></Service>}></Route>
-        <Route path="event" element={<Event></Event>}></Route>
-        <Route path="blog" element={<Blog></Blog>}></Route>
+        <Route path="/service" element={<Service></Service>}></Route>
+        <Route path="/event" element={<Event></Event>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

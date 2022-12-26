@@ -1,0 +1,541 @@
+.RecentNewsContainer {
+  margin-top: 3vw;
+}
+.RecentNewsContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+.TitleLeftDiv {
+  position: relative;
+}
+.TitleLeft {
+  font-size: 2vw;
+  color: #3d9c4d;
+  text-align: left;
+  padding-bottom: 0.5vw;
+  border-bottom: 1.5px solid #808080;
+}
+.LeftCustomIcon {
+  width: 0;
+  height: 0;
+  border-left: 2vw solid transparent;
+  border-top: 2vw solid #3d9c4d;
+  border-right: 2vw solid transparent;
+}
+.RightCustomIcon {
+  width: 0;
+  height: 0;
+  border-left: 2vw solid transparent;
+  border-top: 2vw solid #3d9c4d;
+  border-right: 2vw solid transparent;
+  position: relative;
+  left: 90%;
+}
+.TitleRight {
+  font-size: 2vw;
+  color: #3d9c4d;
+  text-align: left;
+  padding-bottom: 0.5vw;
+  border-bottom: 1.5px solid #808080;
+}
+/* ==============ImageContainer=================== */
+.ImageContainer {
+  margin-top: 2vw;
+}
+.ImageContent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5vw;
+  border-radius: 0.5vw;
+  border-bottom: 2px solid #3d9c4d;
+  background-color: #3d9c4d38;
+  animation: animate 2s ease-in-out;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Image {
+  width: 25vw;
+  height: 20vw;
+  border-radius: 0.5vw;
+}
+.ImageTitle {
+  font-size: 1.5vw;
+}
+.ImageDescription {
+  font-size: 1.2vw;
+  font-family: sans-serif, lato;
+  text-align: left;
+  padding-top: 1.5vw;
+  line-height: 1.5vw;
+  word-break: keep-all;
+}
+.seeMore {
+  font-size: 1.2vw;
+  color: #2d3630;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.seeMore:hover {
+  text-decoration: underline #3d9c4d;
+}
+.Buttons {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+}
+.NextButton {
+  border: 1px solid #2d3630;
+  border-bottom-right-radius: 3px;
+  outline: none;
+  background: transparent;
+  padding: 0.6vw;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.PrevButton {
+  border: 1px solid #2d3630;
+  border-top-left-radius: 3px;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  padding: 0.6vw;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.NextButton:hover {
+  background-color: #3d9c4d;
+  color: #ffffff;
+}
+.PrevButton:hover {
+  background-color: #3d9c4d;
+  color: #ffffff;
+}
+/* =================For Bottom Image Content================== */
+.BottomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e5e5;
+  margin-top: 2vw;
+  padding: 1.5vw;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.CustomLeftBottomBorder {
+  width: 5vw;
+  height: 0.3vh;
+  margin-top: 0.5vw;
+  background-color: #3d9c4d;
+}
+.BottomContent {
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+  animation: slide 3s ease-in-out;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.imageTwo {
+  width: 16.5vw;
+  border: 4px solid #ffffff;
+  border-radius: 5px;
+}
+.BottomContentTitle {
+  font-size: 0.95vw;
+}
+/* ==========Right Section==================================== */
+.RightSectionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.iconTitle {
+  font-size: 1.1vw;
+  line-height: 2vw;
+}
+.iconDescription {
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: sans-serif, lato;
+}
+.singleIconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  margin-top: 7vw;
+}
+.singleIconDiv:nth-child(1) {
+  margin-top: 0;
+}
+.icons {
+  font-size: 6vw;
+  padding: 0.8vw;
+  border-radius: 50%;
+  color: #808080;
+  cursor: pointer;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #3d9c4d;
+  transition: 0.4s ease-in-out;
+}
+.singleIconDiv:hover .icons {
+  background-color: #3d9c4d;
+  color: #ffffff;
+}
+
+/* =======================Responsiveness (max-width: 600px)=================== */
+@media only screen and (max-width: 600px) {
+  .RecentNewsContent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+  .TitleLeft {
+    font-size: 4vw;
+    color: #3d9c4d;
+    text-align: left;
+    padding-bottom: 0.5vw;
+    border-bottom: 1.5px solid #808080;
+  }
+  .TitleRight {
+    font-size: 4vw;
+    color: #3d9c4d;
+    text-align: left;
+    padding-bottom: 0.5vw;
+    border-bottom: 1.5px solid #808080;
+  }
+  .ImageContainer {
+    margin-top: 3vw;
+  }
+  .Image {
+    width: 35vw;
+    height: 30vw;
+    border-radius: 0.5vw;
+  }
+
+  .ImageTitle {
+    font-size: 3vw;
+    padding-top: 1vw;
+  }
+  .ImageDescription {
+    font-size: 2.5vw;
+    font-family: sans-serif, lato;
+    text-align: left;
+    padding-top: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    line-height: 3vw;
+    word-break: keep-all;
+  }
+  .Buttons {
+    position: absolute;
+    top: 6%;
+    right: 0%;
+  }
+  .NextButton {
+    border: 1px solid #2d3630;
+    border-bottom-right-radius: 3px;
+    outline: none;
+    background: transparent;
+    padding: 0.6vw;
+    font-size: 2.1vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .PrevButton {
+    border: 1px solid #2d3630;
+    border-top-left-radius: 3px;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    padding: 0.6vw;
+    font-size: 2.1vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .NextButton:hover {
+    background-color: #3d9c4d;
+    color: #ffffff;
+  }
+  .PrevButton:hover {
+    background-color: #3d9c4d;
+    color: #ffffff;
+  }
+
+  /* ==================For Bottom Section================= */
+  .BottomContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e6e5e5;
+    margin-top: 2vw;
+    padding: 1.5vw;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .BottomContent {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    animation: slide 3s ease-in-out;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .imageTwo {
+    width: 40vw;
+    border: 4px solid #ffffff;
+    border-radius: 5px;
+  }
+  .BottomContentTitle {
+    font-size: 2.2vw;
+  }
+}
+/* ==========Right Section==================================== */
+.RightSectionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+}
+.iconTitle {
+  font-size: 2.8vw;
+  line-height: 2vw;
+  margin-top: 2vw;
+}
+.iconDescription {
+  font-size: 2.5vw;
+  line-height: 1.2vw;
+  font-family: sans-serif, lato;
+}
+.singleIconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  margin-top: 7vw;
+}
+.singleIconDiv:nth-child(1) {
+  margin-top: 0;
+}
+.icons {
+  font-size: 12vw;
+  padding: 0.8vw;
+  border-radius: 50%;
+  color: #808080;
+  cursor: pointer;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #3d9c4d;
+  transition: 0.4s ease-in-out;
+}
+.singleIconDiv:hover .icons {
+  background-color: #3d9c4d;
+  color: #ffffff;
+}
+.seeMore {
+  font-size: 2.5vw;
+  color: #2d3630;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.RightCustomIcon {
+  width: 0;
+  height: 0;
+  border-left: 2vw solid transparent;
+  border-top: 2vw solid #3d9c4d;
+  border-right: 2vw solid transparent;
+  position: relative;
+  left: 0%;
+}
+
+/* ===================Responsiveness (min-width: 601px) and (max-width: 768px) ==================== */
+@media screen and (max-width: 768px) and (min-width: 601px) {
+  .TitleLeftDiv {
+    position: relative;
+  }
+  .Buttons {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+  }
+  /* ==========Right Section Responsive==================================== */
+  .RightSectionContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+  }
+  .iconTitle {
+    font-size: 1.2vw;
+    margin-top: 1.5vw;
+  }
+  .iconDescription {
+    font-size: 1.2vw;
+    line-height: 0vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, lato;
+  }
+  .singleIconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 0vw;
+  }
+  .singleIconDiv:nth-child(1) {
+    margin-top: 0;
+  }
+  .icons {
+    font-size: 6vw;
+    padding: 0.8vw;
+    border-radius: 50%;
+    color: #808080;
+    cursor: pointer;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #3d9c4d;
+    transition: 0.4s ease-in-out;
+  }
+  .singleIconDiv:hover .icons {
+    background-color: #3d9c4d;
+    color: #ffffff;
+  }
+  .seeMore {
+    font-size: 1.2vw;
+    color: #2d3630;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  /* ===========Custom Left Bottom Border================= */
+  .CustomLeftBottomBorder {
+    width: 5vw;
+    height: 0.5vh;
+    margin-top: 0.5vw;
+    background-color: #3d9c4d;
+  }
+}
+/* ========================================================= */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .Buttons {
+    position: absolute;
+    top: 38px;
+    right: 0px;
+  }
+  .iconTitle {
+    font-size: 1.1vw;
+    margin-top: 1.4vw;
+  }
+  .singleIconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    margin-top: 1vw;
+  }
+  .icons {
+    font-size: 6vw;
+    padding: 0.8vw;
+    border-radius: 50%;
+    color: #808080;
+    cursor: pointer;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #3d9c4d;
+    transition: 0.4s ease-in-out;
+  }
+  .iconTitle {
+    font-size: 1.1vw;
+    margin-top: 1.5vw;
+  }
+  .iconDescription {
+    font-size: 1.2vw;
+    line-height: 0vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, lato;
+  }
+  .seeMore {
+    font-size: 1.2vw;
+    color: #2d3630;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* =========================== */
+@media screen and (max-width: 1900px) and (min-width: 1025px) {
+  .Buttons {
+    position: absolute;
+    top: 52px;
+    right: 0px;
+  }
+  .iconTitle {
+    font-size: 1.1vw;
+    margin-top: 1.4vw;
+  }
+  .singleIconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    margin-top: 3.7vw;
+  }
+  .icons {
+    font-size: 6.3vw;
+    padding: 0.8vw;
+    border-radius: 50%;
+    color: #808080;
+    cursor: pointer;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #3d9c4d;
+    transition: 0.4s ease-in-out;
+  }
+  .iconTitle {
+    font-size: 1vw;
+    margin-top: 1.5vw;
+  }
+  .iconDescription {
+    font-size: 1.2vw;
+    line-height: 0vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, lato;
+  }
+  .seeMore {
+    font-size: 1.2vw;
+    color: #2d3630;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+}

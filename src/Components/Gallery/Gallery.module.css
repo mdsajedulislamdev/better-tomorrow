@@ -1,44 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
-
+/* ======================================== */
 .galleryMainDiv {
-  margin-top: 2vw;
-  padding: 4vw;
+  padding-top: 4vw;
+  padding-left: 9vw;
+  padding-right: 9vw;
+  padding-bottom: 5vw;
+  background-image: url("/src/images/poorChildren.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100vw;
+  height: fit-content;
 }
 .galleryTitle {
   text-align: center;
   font-size: 3vw;
+  font-weight: bolder;
   padding-bottom: 0.5vw;
-  font-family: "Roboto", sans-serif;
+}
+.CustomBorderRightBottom {
+  width: 15vw;
+  height: 0.3vh;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  background-color: #3d9c4d;
 }
 .photoText {
-  color: #e29607;
+  color: #3d9c4d;
 }
 .galleryTitleDescription {
   text-align: center;
   font-size: 1.3vw;
   padding-bottom: 1vw;
 }
+.imageGallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5vw;
+  overflow: hidden;
+  padding-top: 2vw;
+}
 .imageDiv {
-  padding: 0.2vw;
+  width: 20vw;
+  border-bottom: 0.4vw solid #7db80ed0;
+  overflow: hidden;
 }
 .image {
-  width: 22vw;
+  width: 20vw;
+  border: 0.7vw solid #f1f1f1f1;
   transition: transform 0.3s linear;
   cursor: pointer;
 }
 .image:hover {
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -ms-transform: scale(1.13);
+  -webkit-transform: scale(1.13);
+  transform: scale(1.13);
 }
-.imageGallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1vw;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 600px) {
+/* ====================(max-width: 600px) ================================ */
+@media screen and (max-width: 600px) {
   .imageGallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -57,9 +76,70 @@
     padding: 0 3vw 3vw 3vw;
     text-align: left;
   }
+  .imageDiv {
+    width: 40vw;
+    border-bottom: 1vw solid #7db80ed0;
+    overflow: hidden;
+  }
   .image {
-    width: 45vw;
+    width: 40vw;
     transition: transform 0.3s linear;
     cursor: pointer;
+  }
+}
+/* ===================(max-width: 768px) and (min-width: 601px)============================= */
+@media screen and (max-width: 768px) and (min-width: 601px) {
+  .galleryTitle {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bolder;
+    padding: 0.5vw;
+    border-radius: 0.2vw;
+    background-color: #3d9c4d;
+  }
+  .photoText {
+    color: #f1f1f1f1;
+  }
+  .CustomBorderRightBottom {
+    width: 15vw;
+    height: 0.3vh;
+    margin: 0 auto;
+    margin-top: 0.5vw;
+    background-color: #f1f1f1f1;
+  }
+}
+
+/*===================(max-width: 1024px) and (min-width: 769px)========================== */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .galleryMainDiv {
+    padding-top: 4vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-bottom: 5vw;
+    background-image: url("/src/images/poorChildren.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+    width: 100vw;
+    height: fit-content;
+  }
+  .galleryTitle {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bolder;
+    padding: 0.5vw;
+    border-radius: 0.2vw;
+    background-color: #3d9c4d;
+  }
+  .photoText {
+    color: #f1f1f1f1;
+  }
+  .CustomBorderRightBottom {
+    width: 15vw;
+    height: 0.3vh;
+    margin: 0 auto;
+    margin-top: 0.5vw;
+    background-color: #f1f1f1f1;
   }
 }

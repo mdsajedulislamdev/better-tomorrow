@@ -1,69 +1,58 @@
 import React from "react";
+import { useState } from "react";
 import style from "./Causes.module.css";
-import imgOne from "../../../src/images/imgOne.jpg";
-import imgTwo from "../../../src/images/imgTwo.jpg";
-import imgThree from "../../../src/images/imgThree.jpg";
-import imgFour from "../../../src/images/imgFour.jpg";
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
+
+import array from "./CausesData";
 
 const Causes = () => {
+  const [items] = useState(array);
+  const length = items.length;
+  const [indexNumber, setIndexNumber] = useState(0);
+
+  const Next = () => {
+    setIndexNumber(indexNumber === length - 3 ? 0 : indexNumber + 3);
+  };
+  const Prev = () => {
+    setIndexNumber(indexNumber === 0 ? length - 3 : indexNumber - 3);
+  };
+
   return (
     <div className={style.causesMainDiv}>
       <div>
         <h1 className={style.topTitle}>
           Our <span className={style.causesText}>Causes</span>
         </h1>
-        <p className={style.titleDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolorem.</p>
+        <p className={style.titleDescription}>Every child has a right to a healthy meal. From lack of a school lunch program.</p>
       </div>
       <div className={style.mainContentDiv}>
-        <div className={style.content}>
-          <img className={style.image} src={imgOne} alt="avatar" />
-          <button className={style.donateButton}>DONATE NOW</button>
-          <div>
-            <h2 className={style.bottomTitle}>Education for Children</h2>
-            <p className={style.bottomTitleDescription}>Lorem ipsum dolor sit amet, consect adipisicing elit. Praesent quos sit.</p>
-            <div className={style.bottomContentDiv}>
-              <span className={style.bottomContentDescription}>Raised: $2032</span>
-              <span className={style.bottomContentDescription}>Goal: $32120</span>
+        {items.slice(indexNumber, indexNumber + 3).map((item) => (
+          <div className={style.TopContentsDiv} key={item.id}>
+            <div className={style.imageDiv}>
+              <div className={style.OverlyStyle}>
+                <a href="#" className={style.donateButton}>
+                  {item?.button}
+                </a>
+              </div>
+              <img className={style.image} src={item?.image} alt="avatar" />
+            </div>
+            <div className={style.BottomContentsMainDiv}>
+              <h2 className={style.bottomTitle}>{item?.title}</h2>
+              <p className={style.bottomTitleDescription}>{item?.description}</p>
+              <div className={style.bottomContentDiv}>
+                <span className={style.bottomContentDescription}>Raised: ${item?.raised}</span>
+                <span className={style.bottomContentDescription}>Goal: ${item?.goal}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className={style.content}>
-          <img className={style.image} src={imgTwo} alt="avatar" />
-          <button className={style.donateButton}>DONATE NOW</button>
-          <div>
-            <h2 className={style.bottomTitle}>Sponsor a Child Today</h2>
-            <p className={style.bottomTitleDescription}>Lorem ipsum dolor sit amet, consect adipisicing elit. Praesent quos sit.</p>
-            <div className={style.bottomContentDiv}>
-              <span className={style.bottomContentDescription}>Raised: $2232</span>
-              <span className={style.bottomContentDescription}>Goal: $72120</span>
-            </div>
-          </div>
-        </div>
-        <div className={style.content}>
-          <img className={style.image} src={imgThree} alt="avatar" />
-          <button className={style.donateButton}>DONATE NOW</button>
-          <div>
-            <h2 className={style.bottomTitle}>Shelter for Poor Child</h2>
-            <p className={style.bottomTitleDescription}>Lorem ipsum dolor sit amet, consect adipisicing elit. Praesent quos sit.</p>
-            <div className={style.bottomContentDiv}>
-              <span className={style.bottomContentDescription}>Raised: $5232</span>
-              <span className={style.bottomContentDescription}>Goal: $502120</span>
-            </div>
-          </div>
-        </div>
-        <div className={style.content}>
-          <div>
-            <img className={style.image} src={imgFour} alt="avatar" />
-            <button className={style.donateButton}>DONATE NOW</button>
-          </div>
-          <div>
-            <h2 className={style.bottomTitle}>Happiness for Orphan Child</h2>
-            <p className={style.bottomTitleDescription}>Lorem ipsum dolor sit amet, consect adipisicing elit. Praesent quos sit.</p>
-            <div className={style.bottomContentDiv}>
-              <span className={style.bottomContentDescription}>Raised: $8232</span>
-              <span className={style.bottomContentDescription}>Goal: $502120</span>
-            </div>
-          </div>
+        ))}
+        <div className={style.NPButtonDiv}>
+          <button className={style.PrevButton} onClick={Prev}>
+            {<HiChevronLeft className={style.LeftIcon} />}
+          </button>
+          <button className={style.NextButton} onClick={Next}>
+            {<HiChevronRight className={style.RightIcon} />}
+          </button>
         </div>
       </div>
     </div>

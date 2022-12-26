@@ -1,3 +1,10 @@
 .serviceMainDiv {
-  margin-top: 7vw;
+  width: 100vw;
+  height: 30vw;
+  overflow-x: hidden;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  margin-left: 200px;
 }

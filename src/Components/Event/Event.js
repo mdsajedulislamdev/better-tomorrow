@@ -4,7 +4,7 @@ import style from "./Event.module.css";
 const Event = () => {
   return (
     <div className={style.eventMainDiv}>
-      <h1>Event</h1>
+      <h1>Hello Event</h1>
     </div>
   );
 };

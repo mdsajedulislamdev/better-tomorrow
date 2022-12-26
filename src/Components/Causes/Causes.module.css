@@ -1,91 +1,139 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
-
 .causesMainDiv {
-  margin-top: 2vw;
-  padding: 4vw;
+  padding-top: 2vw;
+  padding-bottom: 6vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background: #9ee25b15;
 }
 .topTitle {
   text-align: center;
   font-size: 3vw;
-  font-family: "Roboto", sans-serif;
 }
 .causesText {
-  color: #e29607;
+  color: #3d9c4d;
 }
 .titleDescription {
   text-align: center;
   font-size: 1.3vw;
 }
+/* ====================Main Content Div====================== */
 .mainContentDiv {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1vw;
   margin-top: 2vw;
-}
-.content {
-  padding: 1vw 1vw 1vw 1.2vw;
-  border-radius: 0.2vw 0.2vw 0.5vw 0.5vw;
-  box-shadow: -1px 1px 3px 0.5px #585858;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
 }
-.content:hover {
-  -ms-transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
+.TopContentsDiv {
+  position: relative;
+  background: #9ee25b9f;
+  border-radius: 0.3vw 0.3vw 3vw 0.3vw;
+  animation: animate 3s;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.TopContentsDiv:hover .image {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.imageDiv {
+  width: 15vw;
+  height: 12vw;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 1vw;
+  position: relative;
 }
 .image {
-  width: 19.5vw;
+  width: 15vw;
+  height: 12vw;
+  border: 0.5vw solid #3d9c4d;
   border-radius: 2px;
-  transition: transform 0.3s linear;
-  cursor: pointer;
-}
-.image:hover {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-.donateButton {
-  border: 1px solid #e29607;
-  outline: none;
-  background: transparent;
-  padding: 0.4vw 0.7vw;
-  border-radius: 30px;
-  font-size: 1vw;
-  font-weight: bold;
-  margin-top: 1vw;
-  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.donateButton:hover {
-  background: #a56b00;
-  color: white;
+
+/* ====================Overly Style========================= */
+.OverlyStyle {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: #3d9c4dd8;
+  transition: 0.3s ease-in-out;
+}
+/* =================Overly Hover====================== */
+.TopContentsDiv:hover .OverlyStyle {
+  right: 0%;
+  width: 100%;
+}
+.BottomContentsMainDiv {
+  width: 100%;
+  height: 55%;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 0.6vw 0vw 0vw 0vw;
+  border-top-left-radius: 4vw;
+  background-color: #3d9c4d;
 }
 
+/* =============Donate Button============================= */
+.donateButton {
+  width: 8vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0.2vw;
+  padding: 0.5vw;
+  font-size: 1vw;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
 .bottomTitle {
-  text-align: left;
+  text-align: center;
   font-size: 1.3vw;
+  color: #ffffff;
   margin-top: 1vw;
-  font-family: "Roboto", sans-serif;
+  padding-top: 0.5vw;
 }
 .bottomTitle:hover {
-  color: #e29607;
+  color: #9ee25b;
   cursor: pointer;
 }
 .bottomTitleDescription {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   text-align: left;
+  color: #f1f1f1;
   margin-top: 1vw;
   line-height: 1.8vw;
   padding-bottom: 1vw;
+  word-break: break-all;
+  font-family: sans-serif, lato;
 }
 .bottomContentDiv {
   display: flex;
   justify-content: space-between;
   padding-top: 2vw;
   padding-bottom: 1vw;
-  border-top: 1px solid black;
+  border-top: 1px solid #d1d1d1;
 }
 .bottomContentDescription {
   font-size: 1.2vw;
@@ -93,22 +141,100 @@
   font-family: "Roboto", sans-serif;
 }
 .bottomContentDiv :nth-child(1) {
-  color: #007e00;
+  color: #f1f1f1;
 }
 .bottomContentDiv :nth-child(2) {
-  color: #a56b00;
+  color: #a1fa48;
+}
+
+/* =========Next Prev Button====================== */
+.NPButtonDiv {
+  display: flex;
+  justify-content: center;
+  gap: 80vw;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.PrevButton {
+  width: 3vw;
+  outline: none;
+  border: 1px solid #3d9c4d;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+.PrevButton:hover {
+  background-color: #3d9c4d;
+}
+.LeftIcon {
+  font-size: 2vw;
+  position: relative;
+  top: 0.1vw;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.LeftIcon:hover {
+  color: #ffffff;
+}
+.NextButton {
+  width: 3vw;
+  outline: none;
+  border: 1px solid #3d9c4d;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+.NextButton:hover {
+  background-color: #3d9c4d;
+}
+.RightIcon {
+  font-size: 2vw;
+  position: relative;
+  top: 0.1vw;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.RightIcon:hover {
+  color: #ffffff;
 }
 
 /* ================Responsive max600px ========================= */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .TopContentsDiv {
+    position: relative;
+    background: #9ee25b9f;
+    border-radius: 0.3vw 0.3vw 3vw 0.3vw;
+    animation: animate 3s;
+  }
+  @keyframes animate {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .TopContentsDiv:hover .image {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .BottomContentsMainDiv {
+    width: 100%;
+    height: 55%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 0.2vw 0.2vw 3vw 3vw;
+    background-color: #3d9c4d;
+  }
   .topTitle {
     text-align: center;
-    font-size: 6.5vw;
-    font-family: "Roboto", sans-serif;
+    font-size: 5.5vw;
   }
   .titleDescription {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
   }
   .mainContentDiv {
     padding: 1vw;
@@ -116,14 +242,23 @@
   .mainContentDiv {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 4vw;
+    gap: 8vw;
     margin-top: 2vw;
   }
+  .imageDiv {
+    width: 35vw;
+    height: 25vw;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 1vw;
+    position: relative;
+  }
   .image {
-    width: 85vw;
+    width: 35vw;
+    height: 25vw;
+    border: 0.5vw solid #3d9c4d;
     border-radius: 2px;
-    transition: transform 0.2s;
-    cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
   .content {
     padding: 2.5vw 2.5vw 2.5vw 2.5vw;
@@ -131,33 +266,226 @@
     box-shadow: 1px 1px 7px 1px #585858;
   }
   .donateButton {
-    border: 1px solid #e29607;
-    outline: none;
+    width: 18vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #ffffff;
     background: transparent;
-    padding: 1vw 3vw;
-    border-radius: 30px;
-    font-size: 3vw;
+    border: 2px solid #ffffff;
+    border-radius: 0.2vw;
+    padding: 0.5vw;
+    font-size: 2.5vw;
+    text-align: center;
     font-weight: bold;
-    margin-top: 1vw;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
   }
   .bottomTitle {
     text-align: left;
     font-size: 4vw;
     margin-top: 2vw;
-    font-family: "Roboto", sans-serif;
   }
   .bottomTitleDescription {
-    font-size: 2.5vw;
+    font-size: 3vw;
     text-align: left;
     margin-top: 2vw;
-    line-height: 1.8vw;
+    line-height: 3.5vw;
     padding-bottom: 3vw;
+    font-family: "Roboto", sans-serif;
   }
   .bottomContentDescription {
     font-size: 3.5vw;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
+  }
+  .NPButtonDiv {
+    display: flex;
+    justify-content: center;
+    gap: 80vw;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .PrevButton {
+    width: 6vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .PrevButton:hover {
+    background-color: #3d9c4d;
+  }
+  .LeftIcon {
+    font-size: 3.5vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .LeftIcon:hover {
+    color: #ffffff;
+  }
+  .NextButton {
+    width: 6vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .NextButton:hover {
+    background-color: #3d9c4d;
+  }
+  .RightIcon {
+    font-size: 3.5vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .RightIcon:hover {
+    color: #ffffff;
+  }
+}
+/* ===============(max-width: 768px) and (min-width: 601px)================================ */
+@media screen and (max-width: 768px) and (min-width: 601px) {
+  .BottomContentsMainDiv {
+    width: 100%;
+    height: 55%;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+    background-color: #3d9c4d;
+  }
+  .bottomTitle {
+    text-align: center;
+    font-size: 1.5vw;
+    color: #ffffff;
+    margin-top: 1vw;
+    padding-top: 0.5vw;
+  }
+  .bottomTitle:hover {
+    color: #9ee25b;
+    cursor: pointer;
+  }
+  .bottomTitleDescription {
+    font-size: 1.3vw;
+    text-align: left;
+    color: #f1f1f1;
+    margin-top: 1vw;
+    line-height: 1.8vw;
+    padding-bottom: 1vw;
+    word-break: break-all;
+    font-family: sans-serif, lato;
+  }
+  .NPButtonDiv {
+    display: flex;
+    justify-content: center;
+    gap: 82vw;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .PrevButton {
+    width: 4vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .PrevButton:hover {
+    background-color: #3d9c4d;
+  }
+  .LeftIcon {
+    font-size: 3vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .LeftIcon:hover {
+    color: #ffffff;
+  }
+  .NextButton {
+    width: 4vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .NextButton:hover {
+    background-color: #3d9c4d;
+  }
+  .RightIcon {
+    font-size: 3vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .RightIcon:hover {
+    color: #ffffff;
+  }
+}
+/* ==================(min-width: 769px) and (max-width: 1024px)================================== */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .NPButtonDiv {
+    display: flex;
+    justify-content: center;
+    gap: 82vw;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .PrevButton {
+    width: 4vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .PrevButton:hover {
+    background-color: #3d9c4d;
+  }
+  .LeftIcon {
+    font-size: 2.5vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .LeftIcon:hover {
+    color: #ffffff;
+  }
+  .NextButton {
+    width: 4vw;
+    outline: none;
+    border: 1px solid #3d9c4d;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  .NextButton:hover {
+    background-color: #3d9c4d;
+  }
+  .RightIcon {
+    font-size: 2.5vw;
+    position: relative;
+    top: 0.1vw;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  .RightIcon:hover {
+    color: #ffffff;
   }
 }
