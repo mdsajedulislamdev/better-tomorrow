@@ -1,2 +1,245 @@
-
-
+.imageDiv {
+  position: relative;
+}
+.image {
+  width: 100vw;
+  height: 20vw;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 20vw;
+  z-index: 1;
+  background: #2d363077;
+}
+.eventText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3vw;
+}
+/* ================================================ */
+.EventMapMainDiv {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 2vw;
+  padding-bottom: 3vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6vw;
+}
+.AllContentDiv {
+  margin: auto;
+}
+.EventImageDiv {
+  width: 26vw;
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+}
+.Date {
+  position: absolute;
+  bottom: 0vw;
+  left: 0vw;
+  padding: 1vw;
+  font-size: 1.8vw;
+  color: #ffffff;
+  border-radius: 0.2vw;
+  z-index: 1;
+  background-color: #3d9c4de5;
+}
+.eventImg {
+  width: 26.1vw;
+  height: 46vh;
+  border-radius: 1vw 1vw 0 0;
+  transition: 0.4s ease-in-out;
+}
+.AllContentDiv:hover .eventImg {
+  transform: scale(1.1);
+}
+.SubContentDiv {
+  position: relative;
+  top: -0.2vw;
+  width: 100%;
+  padding: 1.8vw;
+  border-radius: 0 0 0.2vw 0.2vw;
+  border-right: 1px solid #2d3630b6;
+  border-bottom: 1px solid #2d3630b6;
+  border-left: 1px solid #2d3630b6;
+}
+.eventTitle {
+  font-size: 2vw;
+  padding-bottom: 1vw;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.eventTitle:hover {
+  color: #3d9c4d;
+}
+.EventTimeIcon {
+  position: relative;
+  top: 5px;
+  font-size: 1.8vw;
+  color: #008000;
+}
+.eventTime {
+  font-size: 1.5vw;
+  padding-bottom: 1vw;
+  font-family: sans-serif, lato;
+}
+.eventLocation {
+  font-size: 1.5vw;
+  font-family: sans-serif, lato;
+}
+.EventLocationIcon {
+  position: relative;
+  top: 4px;
+  font-size: 1.8vw;
+  color: #008000;
+}
+/* ===================DonateSection=================== */
+.DonateSection {
+  width: 100vw;
+  padding: 4vw 2vw 4vw 2vw;
+  background-color: #3d9c4d;
+}
+.DonateButtonDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.HelpText {
+  font-size: 5vw;
+  color: #ffffff;
+}
+.DonateButton a {
+  text-decoration: none;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #3d9c4d;
+  transition: 0.2s ease-in-out;
+}
+.DonateButton {
+  padding: 1vw;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.DonateButton:hover a {
+  color: #2d3630;
+}
+/* =============Responsiveness max600px ========================= */
+@media screen and (max-width: 600px) {
+  .imageDiv {
+    position: relative;
+  }
+  .image {
+    width: 100vw;
+    height: 25vw;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 25vw;
+    z-index: 1;
+    background: #2d363077;
+  }
+  .eventText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 5vw;
+  }
+  /* ======================================== */
+  .EventMapMainDiv {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6vw;
+  }
+  .AllContentDiv {
+    margin: auto;
+  }
+  .EventImageDiv {
+    width: 80vw;
+    height: 54vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .Date {
+    position: absolute;
+    bottom: 0vw;
+    left: 0vw;
+    padding: 3.5vw;
+    font-size: 3vw;
+    color: #ffffff;
+    border-radius: 0.2vw;
+    z-index: 1;
+    background-color: #3d9c4de5;
+  }
+  .eventImg {
+    width: 80.1vw;
+    height: 55vh;
+    border-radius: 1vw 1vw 0 0;
+    transition: 0.4s ease-in-out;
+  }
+  .AllContentDiv:hover .eventImg {
+    transform: scale(1.1);
+  }
+  .SubContentDiv {
+    position: relative;
+    top: -0.2vw;
+    width: 100%;
+    padding: 1.8vw;
+    border-radius: 0 0 0.2vw 0.2vw;
+    border-right: 1px solid #2d3630b6;
+    border-bottom: 1px solid #2d3630b6;
+    border-left: 1px solid #2d3630b6;
+  }
+  .eventTitle {
+    font-size: 5vw;
+    padding-bottom: 2vw;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .eventTitle:hover {
+    color: #3d9c4d;
+  }
+  .EventTimeIcon {
+    position: relative;
+    top: 5px;
+    font-size: 5vw;
+    color: #008000;
+  }
+  .eventTime {
+    font-size: 4vw;
+    padding-bottom: 1vw;
+    font-family: sans-serif, lato;
+  }
+  .eventLocation {
+    font-size: 4vw;
+    font-family: sans-serif, lato;
+  }
+  .EventLocationIcon {
+    position: relative;
+    top: 4px;
+    font-size: 5vw;
+    color: #008000;
+  }
+}
