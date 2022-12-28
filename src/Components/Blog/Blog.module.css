@@ -1,1 +1,424 @@
-
+.imageDiv {
+  position: relative;
+}
+.image {
+  width: 100vw;
+  height: 20vw;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 20vw;
+  z-index: 1;
+  background: #2d363098;
+}
+.contactText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3vw;
+}
+/* ==================================== */
+.AllContentsDiv {
+  width: 100vw;
+  padding-top: 3vw;
+}
+.askedNContactText {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+.AskedText {
+  font-size: 2vw;
+  text-align: center;
+  color: #2d3630;
+}
+.ContactText {
+  font-size: 4vw;
+  text-align: center;
+  color: #2d3630;
+}
+/* =====================InputTypeMainDiv===================== */
+.InputTypeMainDiv [type="text"] {
+  padding: 1.5vw 5vw 1.5vw 1vw;
+  border-radius: 2vw;
+  font-size: 1.2vw;
+  border: none;
+  background-color: #3d9c4d21;
+}
+.InputTypeMainDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 3vw;
+}
+::placeholder {
+  color: #2d3630;
+}
+.Inputs {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.TextAreaDiv {
+  padding-top: 2vw;
+}
+.TextArea {
+  width: 43.3vw;
+  font-size: 1.5vw;
+  padding: 1vw;
+  border: none;
+  background-color: #3d9c4d21;
+  border-radius: 2vw;
+}
+.TextArea::placeholder {
+  font-size: 1.5vw;
+  color: #2d3630;
+}
+.InputsGap {
+  display: flex;
+  gap: 2vw;
+}
+.SendButton {
+  border: none;
+  outline: none;
+  padding: 1.5vw;
+  border-radius: 3vw;
+  cursor: pointer;
+  margin-top: 1vw;
+  background-color: #3d9c4d;
+  transition: 0.3s ease-in-out;
+}
+.SendButton:hover {
+  background-color: #2d3630;
+}
+.SendButton a {
+  font-size: 1.5vw;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* =================RightSection=========================== */
+.RightSection {
+  width: 30vw;
+  height: 80vh;
+  padding: 2vw;
+  border-radius: 1vw;
+  background-color: #3d9c4d21;
+}
+.AddressText {
+  font-size: 2vw;
+  text-align: center;
+  color: #2d3630;
+  padding-bottom: 1vw;
+}
+.AddressTitle {
+  font-size: 1.5vw;
+  text-align: center;
+  color: #2d3630bd;
+}
+.PhoneText {
+  font-size: 2vw;
+  text-align: center;
+  color: #2d3630;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+}
+.EmailText {
+  font-size: 2vw;
+  text-align: center;
+  color: #2d3630;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+}
+.FollowText {
+  font-size: 2vw;
+  text-align: center;
+  color: #2d3630;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+}
+.IconDiv {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+}
+.Icons {
+  font-size: 2vw;
+  color: white;
+  text-align: center;
+}
+.GithubIcon,
+.GoogleIcon,
+.TwitterIcon,
+.InstaGramIcon {
+  font-size: 3vw;
+  color: #ffffff;
+}
+.GithubIcon {
+  background: #2c4762;
+  padding: 0.5vw;
+  border-radius: 2vw;
+}
+.InstaGramIcon {
+  background: #125688;
+  padding: 0.5vw;
+  border-radius: 2vw;
+}
+.TwitterIcon {
+  background: #55acee;
+  padding: 0.5vw;
+  border-radius: 2vw;
+}
+.GoogleIcon {
+  background: #dd4b39;
+  padding: 0.5vw;
+  border-radius: 2vw;
+}
+/* ========SubscribeDiv=========================== */
+.SubscribeDiv {
+  width: 100vw;
+  padding: 2vw;
+  margin-top: 3vw;
+  background-color: #3d9c4d;
+}
+.SubscribeContents {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.SubscribeText {
+  font-size: 5vw;
+  color: #ffffff;
+}
+.SubscribeButton {
+  font-size: 2vw;
+  padding: 1vw 3vw 1vw 3vw;
+  border: none;
+  color: #3d9c4d;
+  background-color: #ffffff;
+  border-radius: 3vw;
+  transition: 0.3s ease-in-out;
+}
+.SubscribeButton:hover {
+  background-color: #2d3630;
+  color: #ffffff;
+}
+/* ======================(max-width:600px)================= */
+@media screen and (max-width: 600px) {
+  .imageDiv {
+    position: relative;
+  }
+  .image {
+    width: 100vw;
+    height: 25vw;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 25vw;
+    z-index: 1;
+    background: #2d363098;
+  }
+  .contactText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 5vw;
+  }
+  .InputTypeMainDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6vw;
+    padding-left: 8vw;
+    padding-right: 5vw;
+    padding-top: 3vw;
+  }
+  /* ==================================== */
+  .AllContentsDiv {
+    width: 100vw;
+    padding-top: 3vw;
+  }
+  .askedNContactText {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .AskedText {
+    font-size: 4vw;
+    text-align: center;
+    color: #2d3630;
+  }
+  .ContactText {
+    font-size: 6vw;
+    text-align: center;
+    color: #2d3630;
+  }
+  /* =====================InputTypeMainDiv===================== */
+  .InputTypeMainDiv [type="text"] {
+    padding: 2vw 6vw 2vw 2vw;
+    border-radius: 3vw;
+    font-size: 2.8vw;
+    border: none;
+    background-color: #3d9c4d21;
+  }
+  ::placeholder {
+    color: #2d3630;
+  }
+  .Inputs {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+  .TextAreaDiv {
+    padding-top: 2vw;
+  }
+  .TextArea {
+    width: 86vw;
+    font-size: 2vw;
+    padding: 1vw;
+    border: none;
+    background-color: #3d9c4d21;
+    border-radius: 2vw;
+  }
+  .TextArea::placeholder {
+    font-size: 2.8vw;
+    color: #2d3630;
+  }
+  .InputsGap {
+    display: flex;
+    gap: 2vw;
+  }
+  .SendButton {
+    border: none;
+    outline: none;
+    padding: 2vw;
+    border-radius: 3vw;
+    cursor: pointer;
+    margin-top: 1vw;
+    background-color: #3d9c4d;
+    transition: 0.3s ease-in-out;
+  }
+  .SendButton:hover {
+    background-color: #2d3630;
+  }
+  .SendButton a {
+    font-size: 3vw;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  /* =================RightSection=========================== */
+  .RightSection {
+    width: 86vw;
+    height: 75vh;
+    padding: 3vw;
+    border-radius: 1vw;
+    background-color: #3d9c4d21;
+  }
+  .AddressText {
+    font-size: 6vw;
+    text-align: center;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+  }
+  .AddressTitle {
+    font-size: 3.5vw;
+    text-align: center;
+    color: #2d3630bd;
+  }
+  .PhoneText {
+    font-size: 6vw;
+    text-align: center;
+    color: #2d3630;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+  }
+  .EmailText {
+    font-size: 6vw;
+    text-align: center;
+    color: #2d3630;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+  }
+  .FollowText {
+    font-size: 6vw;
+    text-align: center;
+    color: #2d3630;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+  }
+  .IconDiv {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+  }
+  .GithubIcon,
+  .GoogleIcon,
+  .TwitterIcon,
+  .InstaGramIcon {
+    font-size: 6vw;
+    color: #ffffff;
+  }
+  .GithubIcon {
+    background: #2c4762;
+    padding: 0.5vw;
+    border-radius: 2vw;
+  }
+  .InstaGramIcon {
+    background: #125688;
+    padding: 0.5vw;
+    border-radius: 2vw;
+  }
+  .TwitterIcon {
+    background: #55acee;
+    padding: 0.5vw;
+    border-radius: 2vw;
+  }
+  .GoogleIcon {
+    background: #dd4b39;
+    padding: 0.5vw;
+    border-radius: 2vw;
+  }
+  /* ========SubscribeDiv=========================== */
+  .SubscribeDiv {
+    width: 100vw;
+    padding: 2vw;
+    margin-top: 3vw;
+    background-color: #3d9c4d;
+  }
+  .SubscribeContents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .SubscribeText {
+    font-size: 5vw;
+    color: #ffffff;
+  }
+  .SubscribeButton {
+    font-size: 3vw;
+    padding: 1.5vw 3.5vw 1.5vw 3.5vw;
+    border: none;
+    color: #3d9c4d;
+    background-color: #ffffff;
+    border-radius: 3vw;
+    transition: 0.3s ease-in-out;
+  }
+  .SubscribeButton:hover {
+    background-color: #2d3630;
+    color: #ffffff;
+  }
+}
