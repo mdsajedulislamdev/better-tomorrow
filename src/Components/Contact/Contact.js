@@ -1,9 +1,9 @@
 import React from "react";
-import style from "./Blog.module.css";
+import style from "./Contact.module.css";
 import image from "../../../src/images/contactHalfImg.jpg";
 import { AiFillGithub, AiFillGoogleSquare, AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
-const Blog = () => {
+const Contact = () => {
   return (
     <div className={style.blogMainDiv}>
       <div className={style.imageDiv}>
@@ -76,4 +76,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Contact;

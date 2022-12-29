@@ -55,7 +55,7 @@ const Navbar = () => {
         <CustomLink className={style.customLink} to="/event">
           <span className={style.navText}> EVENT</span>
         </CustomLink>
-        <CustomLink className={style.customLink} to="/blog">
+        <CustomLink className={style.customLink} to="/contact">
           <span className={style.navText}> CONTACT</span>
         </CustomLink>
         <div className={style.callAnytimeContent}>

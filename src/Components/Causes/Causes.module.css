@@ -82,8 +82,7 @@
   height: 55%;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
-  border-radius: 0.6vw 0vw 0vw 0vw;
-  border-top-left-radius: 4vw;
+  border-radius: 0.6vw 0.6vw 0vw 0vw;
   background-color: #3d9c4d;
 }
 
@@ -109,7 +108,7 @@
 }
 .bottomTitle {
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   color: #ffffff;
   margin-top: 1vw;
   padding-top: 0.5vw;

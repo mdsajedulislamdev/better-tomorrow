@@ -1,10 +1,216 @@
 .serviceMainDiv {
-  width: 100vw;
-  height: 30vw;
-  overflow-x: hidden;
+  padding-bottom: 5vw;
 }
-.image {
-  width: 300px;
-  height: 300px;
-  margin-left: 200px;
+.imageDiv {
+  position: relative;
+}
+.HalfImg {
+  width: 100vw;
+  height: 21vw;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 21vw;
+  z-index: 1;
+  background: #2d363098;
+}
+.ServiceText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3vw;
+}
+/* ========================================= */
+.BottomSection {
+  width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vw;
+}
+.BottomContentDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3vw;
+}
+.SectionImageDiv {
+  width: 42vw;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+.SectionImage {
+  width: 42vw;
+  height: 80vh;
+  border-radius: 0.2vw;
+  transition: 0.5s ease-in-out;
+}
+.SectionImageDiv:hover .SectionImage {
+  transform: scale(1.2);
+}
+/* ===============Overly Style==================== */
+.OverlyStyle {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 100%;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  background: #3d9c4dd8;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.SectionImageDiv:hover .OverlyStyle {
+  bottom: 0%;
+  height: 100%;
+}
+.Donate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  padding: 0.6vw;
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+}
+/* ===============Right Side======================== */
+.Title {
+  font-size: 2.8vw;
+  padding-bottom: 0.8vw;
+  color: #2d3630;
+}
+.Paragraph {
+  font-size: 1.4vw;
+  color: #2d363098;
+  line-height: 2vw;
+  font-family: sans-serif, lato;
+}
+/* ===================LastBottomSection============= */
+.LastBottomSection {
+  width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3vw;
+}
+.LastImageDiv {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+}
+.SingleImageDiv {
+  width: 20vw;
+  height: 70vh;
+  overflow: hidden;
+}
+.LastImage {
+  width: 20vw;
+  height: 70vh;
+  transition: 0.5s ease-in-out;
+}
+.LastImage:hover {
+  transform: scale(1.2);
+}
+.LastTitle {
+  font-size: 2.8vw;
+  padding-bottom: 0.8vw;
+  color: #2d3630;
+}
+.LastParagraph {
+  font-size: 1.4vw;
+  color: #2d363098;
+  line-height: 2vw;
+  font-family: sans-serif, lato;
+}
+
+/* ================Responsiveness max600px===================== */
+@media screen and (max-width: 600px) {
+  .BottomContentDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3vw;
+  }
+  .SectionImageDiv {
+    width: 89vw;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .SectionImage {
+    width: 89vw;
+    height: 80vh;
+    border-radius: 0.2vw;
+    transition: 0.5s ease-in-out;
+  }
+  .SectionImageDiv:hover .SectionImage {
+    transform: scale(1.2);
+  }
+  /* ===============Right Side======================== */
+  .Title {
+    font-size: 5.6vw;
+    padding-bottom: 2vw;
+    color: #2d3630;
+  }
+  .Paragraph {
+    font-size: 3vw;
+    color: #2d363098;
+    line-height: 4vw;
+    font-family: sans-serif, lato;
+  }
+
+  /* ============Last Bottom Section================ */
+  .LastBottomSection {
+    width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3vw;
+  }
+  .LastImageDiv {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+  }
+  .SingleImageDiv {
+    width: 42vw;
+    height: 60vh;
+    overflow: hidden;
+  }
+  .LastImage {
+    width: 42vw;
+    height: 60vh;
+    transition: 0.5s ease-in-out;
+  }
+  .LastImage:hover {
+    transform: scale(1.2);
+  }
+  .LastTitle {
+    font-size: 5.6vw;
+    padding-bottom: 2vw;
+    color: #2d3630;
+  }
+  .LastParagraph {
+    font-size: 3vw;
+    color: #2d363098;
+    line-height: 4vw;
+    font-family: sans-serif, lato;
+  }
 }
