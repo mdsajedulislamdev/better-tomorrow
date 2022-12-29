@@ -1,0 +1,116 @@
+.ImageDiv {
+  position: relative;
+}
+.DonateImg {
+  width: 100vw;
+  height: fit-content;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: #2d363098;
+}
+.AppreciateText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 5vw;
+  animation: move 3s ease-in-out;
+}
+
+/* =================DonateButtonDiv================= */
+.DonateButtonDiv {
+  position: absolute;
+  top: 70%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 5vw;
+  animation: move 3s ease-in-out;
+}
+.DonateButton {
+  font-size: 2vw;
+  padding: 1.54vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bolder;
+  border-radius: 0 3vw 3vw 0;
+  background-color: #3d9c4d;
+  transition: 0.3s ease-in-out;
+}
+.DonateButton:hover {
+  color: #2d3630;
+}
+.DonateInput {
+  font-size: 2vw;
+  padding: 1.4vw;
+  border-style: inset;
+  border: 1px solid #3d9c4d;
+  outline: none;
+}
+/* ====================Responsiveness max600px====================== */
+@media screen and (max-width: 600px) {
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 45vh;
+    z-index: 1;
+    background: #2d363098;
+  }
+  .AppreciateText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 5.5vw;
+    animation: move 3s ease-in-out;
+  }
+
+  /* =================DonateButtonDiv================= */
+  .DonateButtonDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 5vw;
+    animation: move 3s ease-in-out;
+  }
+  .DonateButton {
+    font-size: 2.2vw;
+    padding: 3vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bolder;
+    border-radius: 0 3vw 3vw 0;
+    background-color: #3d9c4d;
+    transition: 0.3s ease-in-out;
+  }
+  .DonateButton:hover {
+    color: #2d3630;
+  }
+  .DonateInput {
+    font-size: 2.2vw;
+    padding: 2.8vw;
+    border-style: inset;
+    border: 1px solid #3d9c4d;
+    outline: none;
+  }
+}
