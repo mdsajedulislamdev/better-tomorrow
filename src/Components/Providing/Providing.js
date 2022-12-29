@@ -19,7 +19,7 @@ const Providing = () => {
         <div className={style.content}>
           <div className={style.ImageDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.Donate} href="#">
+              <a className={style.Donate} href="/donate">
                 Donate
               </a>
             </div>
@@ -36,7 +36,7 @@ const Providing = () => {
         <div className={style.content}>
           <div className={style.ImageDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.Donate} href="#">
+              <a className={style.Donate} href="/donate">
                 Donate
               </a>
             </div>
@@ -53,7 +53,7 @@ const Providing = () => {
         <div className={style.content}>
           <div className={style.ImageDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.Donate} href="#">
+              <a className={style.Donate} href="/donate">
                 Donate
               </a>
             </div>

@@ -33,7 +33,7 @@ const Contact = () => {
               <textarea className={style.TextArea} cols="30" rows="5" placeholder="Type Your Message"></textarea>
             </div>
             <button className={style.SendButton}>
-              <a href="/#">Send Message</a>
+              <a href="/donate">Send Message</a>
             </button>
           </div>
           <div className={style.RightSection}>

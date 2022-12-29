@@ -123,13 +123,13 @@
 }
 .DonateButton a {
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: bold;
   color: #3d9c4d;
   transition: 0.2s ease-in-out;
 }
 .DonateButton {
-  padding: 1vw;
+  padding: 1.5vw;
   border: none;
   border-radius: 3vw;
   cursor: pointer;

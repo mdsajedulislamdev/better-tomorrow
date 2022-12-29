@@ -45,31 +45,31 @@ const Footer = () => {
           <div>
             <h4 className={style.Title}>Special Health Service</h4>
             <div className={style.Links}>
-              <a href="#">Health care for poor people</a>
-              <a href="#">Super home for children</a>
-              <a href="#">Land property for child</a>
-              <a href="#">Farmer facilities for children</a>
-              <a href="#">Aggro farms for poor people</a>
+              <a href="/donate">Health care for poor people</a>
+              <a href="/donate">Super home for children</a>
+              <a href="/donate">Land property for child</a>
+              <a href="/donate">Farmer facilities for children</a>
+              <a href="/donate">Aggro farms for poor people</a>
             </div>
           </div>
           <div>
             <h4 className={style.Title}>Super Food Service</h4>
             <div className={style.Links}>
-              <a href="#">Farmer facilities for children</a>
-              <a href="#">Food care for poor people</a>
-              <a href="#">Super home for children</a>
-              <a href="#">Aggro farms for poor people</a>
-              <a href="#">Land property for child</a>
+              <a href="/donate">Farmer facilities for children</a>
+              <a href="/donate">Food care for poor people</a>
+              <a href="/donate">Super home for children</a>
+              <a href="/donate">Aggro farms for poor people</a>
+              <a href="/donate">Land property for child</a>
             </div>
           </div>
           <div>
             <h4 className={style.Title}>Land Service For Child</h4>
             <div className={style.Links}>
-              <a href="#">Lands facilities for children</a>
-              <a href="#">Food care for poor people</a>
-              <a href="#">Super home for children</a>
-              <a href="#">Aggro farms for poor people</a>
-              <a href="#">Land property for child</a>
+              <a href="/donate">Lands facilities for children</a>
+              <a href="/donate">Food care for poor people</a>
+              <a href="/donate">Super home for children</a>
+              <a href="/donate">Aggro farms for poor people</a>
+              <a href="/donate">Land property for child</a>
             </div>
           </div>
           <div className={style.GalleryDiv}>

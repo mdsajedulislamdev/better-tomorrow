@@ -26,7 +26,7 @@ const News = () => {
           <div className={style.MainImgDiv}>
             {/* ============================Overly Style========================= */}
             <div className={style.OverlyStyle}>
-              <a className={style.DonateLink} href="#">
+              <a className={style.DonateLink} href="/donate">
                 Please Donate
               </a>
             </div>
@@ -49,7 +49,7 @@ const News = () => {
         <div className={style.content}>
           <div className={style.MainImgDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.DonateLink} href="#">
+              <a className={style.DonateLink} href="/donate">
                 Please Donate
               </a>
             </div>
@@ -72,7 +72,7 @@ const News = () => {
         <div className={style.content}>
           <div className={style.MainImgDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.DonateLink} href="#">
+              <a className={style.DonateLink} href="/donate">
                 Please Donate
               </a>
             </div>

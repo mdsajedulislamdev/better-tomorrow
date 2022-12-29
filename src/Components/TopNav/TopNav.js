@@ -39,7 +39,7 @@ const TopNav = () => {
         </a>
       </div>
       <button className={style.donationButton}>
-        <a href="#">Make Donation</a>
+        <a href="/donate">Make Donation</a>
       </button>
     </div>
   );

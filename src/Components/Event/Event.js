@@ -44,7 +44,7 @@ const Event = () => {
             Help For Poor <br /> people Worldwide
           </h1>
           <button className={style.DonateButton}>
-            <a href="/#">Donate Please</a>
+            <a href="/donate">Donate Please</a>
           </button>
         </div>
       </div>

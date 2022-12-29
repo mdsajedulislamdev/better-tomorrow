@@ -24,7 +24,7 @@ const Home = () => {
               <a href="#">Join over 10 million people supporting charity</a>
             </h5>
             <button className={style.FirstButton}>
-              <a href="/#">Make Donation</a>
+              <a href="/donate">Make Donation</a>
             </button>
           </div>
           <div className={style.imageDiv}>
@@ -39,7 +39,7 @@ const Home = () => {
               <a href="#">Join over 12 million people supporting charity</a>
             </h5>
             <button className={style.SecondButton}>
-              <a href="/#">Make Donation</a>
+              <a href="/donate">Make Donation</a>
             </button>
           </div>
           <div className={style.imageDiv}>

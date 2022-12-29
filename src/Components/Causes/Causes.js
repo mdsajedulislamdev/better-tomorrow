@@ -30,7 +30,7 @@ const Causes = () => {
           <div className={style.TopContentsDiv} key={item.id}>
             <div className={style.imageDiv}>
               <div className={style.OverlyStyle}>
-                <a href="#" className={style.donateButton}>
+                <a href="/donate" className={style.donateButton}>
                   {item?.button}
                 </a>
               </div>

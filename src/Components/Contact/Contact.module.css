@@ -23,6 +23,15 @@
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 3vw;
+  animation: move 3s ease-in-out;
+}
+@keyframes move {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 /* ==================================== */
 .AllContentsDiv {

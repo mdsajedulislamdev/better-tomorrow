@@ -16,12 +16,6 @@ const Think = () => {
     setIndexNumber(indexNumber === 0 ? length - 1 : indexNumber - 1);
   };
 
-  // useEffect(() => {
-  // setInterval(() => {
-  //   setIndexNumber((indexNumber) => (indexNumber == length - 1 ? 0 : indexNumber + 1));
-  // }, 3000);
-  // }, []);
-
   return (
     <div className={style.thinkDiv}>
       <div>

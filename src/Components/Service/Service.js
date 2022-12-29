@@ -18,7 +18,7 @@ const Service = () => {
         <div className={style.BottomContentDiv}>
           <div className={style.SectionImageDiv}>
             <div className={style.OverlyStyle}>
-              <a className={style.Donate} href="/#">
+              <a className={style.Donate} href="/donate">
                 Donate
               </a>
             </div>
